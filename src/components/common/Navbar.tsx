@@ -26,7 +26,7 @@ export default function Navigator() {
 	return (
 		<>
 			<Navbar
-				className="bg-white dark:bg-gray-900"
+				className="bg-white dark:bg-gray-900 md:px-6 md:py-8"
 				fluid={true}
 				rounded={false}
 			>
