@@ -2,35 +2,14 @@ import React from "react";
 
 export default function Home() {
 	return (
-      <div className="text-center bg-white dark:bg-gray-900 dark:text-white">
-         <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>        <div>lol</div>
-         <div>lol</div>
-         <div>lol</div>
-      </div>
-
+    	<main className="flex items-center mx-auto px-20 flex-col gap-3 justify-center max-w-5xl min-h-screen py-20">
+        <h1 className="text-center dark:text-white font-bold text-3xl relative bottom-20">
+         Under construction, check back soon!		
+        </h1>
+         <p className="dark:text-slate-400 text-slate-600 relative bottom-20">
+            This site is currently under construction. Please check back soon for updates.
+			</p>
+      </main>
    )
 }
 
