@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LogoName, navLinks } from "../../utils/constants";
+import { LogoName } from "../../utils/constants";
 import Utils from "../../utils/Utils";
 import { Theme } from "../../utils/Types";
 
