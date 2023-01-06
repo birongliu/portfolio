@@ -34,7 +34,7 @@ export default function Navigator() {
 	}, []);
 
 	return (
-		<nav className="sticky top-0 bg-white border-gray-200 dark:bg-gray-900 sm:px-4 py-2.5 px-2">
+		<nav className="sticky top-0 bg-white border-gray-200 dark:bg-gray-900 sm:px-4 py-2.5 px-8">
 			<div className="container flex flex-wrap items-center justify-between mx-auto">
 				<a href="/" className="flex items-center">
 					<img
@@ -106,7 +106,7 @@ export default function Navigator() {
 				>
 					<ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
 						{navLinks.map((link) => (
-							<li key={link.name}>
+							<li className="text-center" key={link.name}>
 								<NavLink
 									to={link.path}
 									key={link.name}
