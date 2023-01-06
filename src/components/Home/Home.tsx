@@ -6,7 +6,7 @@ export default function Home() {
         <h1 className="container wi text-center dark:text-white font-bold text-3xl relative bottom-20">
          Under construction, check back soon!		
         </h1>
-         <p className="dark:text-slate-400 text-slate-600 relative bottom-20">
+         <p className="dark:text-slate-400 text-slate-600 relative bottom-20 mt-4 max-w-10">
             This site is currently under construction. Please check back soon for updates.
 			</p>
       </main>
