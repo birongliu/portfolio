@@ -6,7 +6,7 @@ export default function FourOFour() {
    const navigate = useNavigate();
 	return (
 		<main className="flex items-center mx-auto px-20 flex-col gap-3 justify-center max-w-5xl min-h-screen py-20">
-			<h1 className="dark:text-white font-bold text-3xl relative bottom-20">
+			<h1 className="text-center dark:text-white font-bold text-3xl relative bottom-20">
 				404: Page Not Found
 			</h1>
 			<p className="dark:text-slate-400 text-slate-600 relative bottom-20">
