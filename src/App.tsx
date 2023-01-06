@@ -1,9 +1,9 @@
 import React from "react";
-import Navagator from "./components/Common/Navbar";
+import Navagator from "./components/common/Navbar";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home/Home";
 import FourOFour from "./components/Error/404";
-import Footer from "./components/Common/Footer";
+import Footer from "./components/common/Footer";
 
 export default function App() {
 	return (
