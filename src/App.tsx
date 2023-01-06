@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Home, Footer, FourOFour, Navigator } from "./components"
+import { Home, FourOFour, Navigator } from "./components"
 
 export default function App() {
 	return (
@@ -11,10 +11,8 @@ export default function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/404" element={<FourOFour />} />
           <Route path="*" element={ <Navigate to="/404" replace />} />
-
 				</Routes>
 			</main>
-      <Footer />
 		</div>
 	);
 }
