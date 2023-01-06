@@ -1,7 +1,7 @@
 import FourOFour from "./Error/404"
 import Home from "./Home/Home"
 import Project from "./Project/Project"
-import Navbar from "./common/Footer"
+import Navbar from "./common/Navbar"
 import Footer from "./common/Footer"
 export {
    FourOFour,
