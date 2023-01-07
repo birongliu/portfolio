@@ -34,7 +34,7 @@ export default function Navigator() {
 	}, []);
 
 	return (
-		<nav className="sticky top-0 z-1 items-center mx-auto px-8 justify-between max-w-6xl py-4">
+		<nav className="sticky top-0  items-center mx-auto px-8 justify-between max-w-6xl py-4">
 			<div className="container flex flex-wrap items-center justify-between mx-auto">
 				<a href="/" className="flex items-center">
 					<span className="font-bold font-hack m-0 text-2xl text-brand-3 dark:text-white">
