@@ -34,7 +34,7 @@ export default function Navigator() {
 	}, []);
 
 	return (
-		<nav className="bg-slate-100 dark:bg-slate-900 backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
+		<nav className="bg-slate-100 dark:bg-slate-900 backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10 max-w-6xl">
 			<div className="container flex flex-wrap items-center justify-between mx-auto">
 				<a href="/" className="flex items-center">
 					<span className="font-bold font-hack m-0 text-2xl text-brand-3 dark:text-white">
