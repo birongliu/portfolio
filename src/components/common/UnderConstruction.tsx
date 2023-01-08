@@ -3,7 +3,7 @@ import React from "react";
 export default function UnderConstruction() {
 	return (
 		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen">
-			<div className="relative text-center bottom-5">
+			<div className="relative text-center bottom-30">
 				<h1 className="dark:text-white font-bold text-3xl">
 					🚧 Under construction 🚧
 				</h1>
