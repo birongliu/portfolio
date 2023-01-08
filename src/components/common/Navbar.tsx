@@ -34,7 +34,7 @@ export default function Navigator() {
 	}, []);
 
 	return (
-		<header className="md:px-10  bg-white dark:bg-slate-900 backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
+		<header className="md:px-10 backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
 			<div className="flex items-center justify-between max-w-6xl mx-auto px-8 py-4">
 				<a href="/" aria-label="Home">
 					<h1 className="font-bold text-2xl font-hack m-0 text-brand-3 dark:text-white">

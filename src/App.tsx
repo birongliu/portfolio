@@ -11,7 +11,7 @@ import {
 
 export default function App() {
 	return (
-		<div className="dark:bg-gray-900">
+		<div className="dark:bg-gray-900 bg-slate-300">
 			<Navbar />
 			<main>
 				<Routes>
