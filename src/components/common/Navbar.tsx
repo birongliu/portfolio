@@ -43,9 +43,12 @@ export default function Navigator() {
 						<span className="relative text-brown-11">{' />'}</span>
 					</h1>
 				</a>
-				<nav className="hidden md:block space-x-3">
+				<nav className="hidden md:block space-x-3 relative right-10">
 					{navLinks.map(link => (
-						<NavLink  to={link.path} key={link.name} className={({ isActive }) => isActive ? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-sky-200 text-sky-800" : "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-slate-400 text-slate-600"} >{link.name}</NavLink>
+						<NavLink style={{
+							textAlign: "center",
+							margin: "auto"
+						}} to={link.path} key={link.name} className={({ isActive }) => isActive ? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-sky-200 text-sky-800" : "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-slate-400 text-slate-600"} >{link.name}</NavLink>
 					))}
 				</nav>
 				<div className="hidden md:block">
