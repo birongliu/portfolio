@@ -11,8 +11,8 @@ function handleTheme(
 	if (!event.defaultPrevented) event.preventDefault();
 	const currentTheme = Utils.getCurrentTheme();
 	const newTheme = currentTheme === "dark" ? "light" : "dark";
-	localStorage.setItem("theme", newTheme);
 	Utils.switchMobileTheme(newTheme);
+	localStorage.setItem("theme", newTheme);
 	document.documentElement.classList.add(newTheme);
 	document.documentElement.classList.remove(currentTheme);
 	setTheme(newTheme);
@@ -22,7 +22,6 @@ function handleNavBarMenu(
 	event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 ) {
 	if (!event.defaultPrevented) event.preventDefault();
-	console.log(event);
 }
 
 export default function Navigator() {
@@ -30,8 +29,8 @@ export default function Navigator() {
 
 	useEffect(() => {
 		const currentTheme = Utils.getCurrentTheme();
-		document.documentElement.classList.add(currentTheme);
 		Utils.switchMobileTheme(currentTheme);
+		document.documentElement.classList.add(currentTheme);
 		setTheme(currentTheme);
 	}, []);
 
