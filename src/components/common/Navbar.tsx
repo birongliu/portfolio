@@ -11,6 +11,8 @@ function handleTheme(
 	if (!event.defaultPrevented) event.preventDefault();
 	const currentTheme = Utils.getCurrentTheme();
 	const newTheme = currentTheme === "dark" ? "light" : "dark";
+	const theme = (document.querySelector('meta[name="theme-color"]') as Element);
+	if(theme.hasAttribute("content")) theme.removeAttribute("content")
 	Utils.switchMobileTheme(newTheme);
 	localStorage.setItem("theme", newTheme);
 	document.documentElement.classList.add(newTheme);
