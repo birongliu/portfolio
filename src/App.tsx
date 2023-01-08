@@ -17,7 +17,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<UnderConstruction />}></Route>
-					<Route path="/project" element={<Project />}/>
+					<Route path="/project" element={<UnderConstruction />}/>
 					<Route path="/404" element={<FourOFour />} />
 					<Route path="*" element={<Navigate to="/404" replace />} />
 				</Routes>
