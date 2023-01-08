@@ -10,7 +10,7 @@ export default function Home() {
 					alt="icon"
 					src="https://cdn.discordapp.com/avatars/358382764959203338/d175e81df15d96edfc1d68a067e4a138.webp?size=512"
 				></img>
-				<span id="circle" className="border-blue-700 dark:border-blue-600 rounded-full absolute border-2 border-full h-[calc(50%+44.5px)] top-5 w-[calc(50%+62.5px)]"></span>
+				<span id="circle" className="border-blue-500 dark:border-blue-400 rounded-full absolute border-2 border-full h-[calc(50%+44.5px)] top-5 w-[calc(50%+62.5px)]"></span>
 
 			</div>
 			<h1 className="font-bold dark:text-white text-4xl text-center">
