@@ -5,7 +5,6 @@ import {
 	FourOFour,
 	Navbar,
 	Footer,
-	Project,
 	UnderConstruction,
 } from "./components";
 
