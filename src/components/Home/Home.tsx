@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Home() {
 	return (
-		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen py-[18rem]">
-		<div className="relative bottom-20">
+		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen">
+		<div className="relative bottom-30">
 			<div className="flex m-6 justify-center">
 				<img
 					className="rounded-full h-48 sm:h-48 sm:w-48 leading-normal sm:text-6xl"

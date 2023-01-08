@@ -43,7 +43,7 @@ export default function Navigator() {
 						<span className="relative text-brown-11">{' />'}</span>
 					</h1>
 				</a>
-				<nav className="hidden md:block space-x-3 relative right-10">
+				<nav className="hidden md:block space-x-3 relative right-11">
 					{navLinks.map(link => (
 						<NavLink style={{
 							textAlign: "center",
