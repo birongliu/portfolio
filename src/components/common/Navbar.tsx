@@ -30,6 +30,9 @@ export default function Navigator() {
 	useEffect(() => {
 		const currentTheme = Utils.getCurrentTheme();
 		document.documentElement.classList.add(currentTheme);
+		const theme = (document.querySelector('meta[name="theme-color"]') as Element);
+		const currentColorTheme = currentTheme === "dark" ? "#11827" : "#cbd5e1"
+		if(!theme.getAttribute('content')) theme.setAttribute("content", currentColorTheme)
 		setTheme(currentTheme);
 	}, []);
 
