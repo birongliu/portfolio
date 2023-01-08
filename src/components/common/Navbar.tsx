@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { LogoName, navLinks } from "../../utils/constants";
 import Utils from "../../utils/Utils";
 import { Theme } from "../../utils/Types";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function handleTheme(
 	event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
@@ -34,15 +34,22 @@ export default function Navigator() {
 	}, []);
 
 	return (
-		<nav className="flex items-center mx-auto px-8 justify-between max-w-6xl py-4">
-			<div className="container flex flex-wrap items-center justify-between mx-auto">
-				<a href="/" className="flex items-center">
-					<span className="font-bold font-hack m-0 text-2xl text-brand-3 dark:text-white">
-						{LogoName}
-					</span>
+		<header className="bg-white dark:bg-slate-900 backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
+			<div className="flex items-center justify-between max-w-6xl mx-auto px-8 py-4">
+				<a href="/" aria-label="Home">
+					<h1 className="font-bold text-2xl font-hack m-0 text-brand-3 dark:text-white">
+						<span className="relative text-brown-11">{'< '}</span>
+						Bi Rong 
+						<span className="relative text-brown-11">{' />'}</span>
+					</h1>
 				</a>
-				<div className="flex md:order-2">
-					<button
+				<nav className="hidden md:block space-x-3">
+					{navLinks.map(link => (
+						<NavLink  to={link.path} key={link.name} className={({ isActive }) => isActive ? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-sky-200 text-sky-800" : "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-slate-400 text-slate-600"} >{link.name}</NavLink>
+					))}
+				</nav>
+				<div className="hidden md:block">
+				<button
 						onClick={(e) => handleTheme(e, setTheme)}
 						id="theme-toggle"
 						type="button"
@@ -71,53 +78,8 @@ export default function Navigator() {
 							></path>
 						</svg>
 					</button>
-					<button
-						data-collapse-toggle="navbar-sticky"
-						type="button"
-						className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-						aria-controls="navbar-sticky"
-						aria-expanded="false"
-						onClick={handleNavBarMenu}
-					>
-						<span className="sr-only">Open main menu</span>
-						<svg
-							className="w-6 h-6"
-							aria-hidden="true"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fillRule="evenodd"
-								d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-								clip-rule="evenodd"
-							></path>
-						</svg>
-					</button>
-				</div>
-				<div
-					className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-					id="navbar-sticky"
-				>
-					<ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-					{navLinks.map((link) => (
-							<li key={link.name}>
-								<NavLink
-									to={link.path}
-									key={link.name}
-									className={({ isActive }) =>
-										isActive
-											? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-											: "block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-70"
-									}
-								>
-									{link.name}
-								</NavLink>
-							</li>
-						))}
-					</ul>
 				</div>
 			</div>
-		</nav>
+		</header>
 	);
 }
