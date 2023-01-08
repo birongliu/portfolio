@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home() {
 	return (
-		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen">
+		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen py-20">
 		<div className="relative bottom-30">
 			<div className="flex m-6 justify-center">
 				<img
