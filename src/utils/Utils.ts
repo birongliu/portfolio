@@ -9,8 +9,8 @@ export default class Utils {
    }
    public static switchMobileTheme(currentTheme: Theme) {
       const theme = (document.querySelector('meta[name="theme-color"]') as Element);
-      const currentColorTheme = currentTheme === "dark" ? "white" : "#cbd5e1";
-      if(theme.hasAttribute("content")) theme.removeAttribute('content');
+      const currentColorTheme = currentTheme === "dark" ? "#11827" : "#cbd5e1";
       theme.setAttribute("content", currentColorTheme);
+
    }
 }
