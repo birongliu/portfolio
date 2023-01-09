@@ -11,8 +11,8 @@ function handleTheme(
 	if (!event.defaultPrevented) event.preventDefault();
 	const currentTheme = Utils.getCurrentTheme();
 	const newTheme = currentTheme === "dark" ? "light" : "dark";
-	const theme = (document.querySelector('meta[name="theme-color"]') as Element);
-	if(theme.hasAttribute("content")) theme.removeAttribute('content')
+	const theme = document.querySelector('meta[name="theme-color"]') as Element;
+	if (theme.hasAttribute("content")) theme.removeAttribute("content");
 	Utils.switchMobileTheme(newTheme);
 	localStorage.setItem("theme", newTheme);
 	document.documentElement.classList.add(newTheme);
@@ -41,21 +41,33 @@ export default function Navigator() {
 			<div className="flex items-center justify-between max-w-6xl mx-auto md:py-5 py-6 px-12">
 				<a href="/" aria-label="Home">
 					<h1 className="font-bold text-2xl font-hack m-0 text-brand-3 dark:text-white">
-						<span className="relative text-brown-11">{'< '}</span>
-						Bi Rong 
-						<span className="relative text-brown-11">{' />'}</span>
+						<span className="relative text-brown-11">{"< "}</span>
+						Bi Rong
+						<span className="relative text-brown-11">{" />"}</span>
 					</h1>
 				</a>
 				<nav className="hidden md:block space-x-3 relative right-11">
-					{navLinks.map(link => (
-						<NavLink style={{
-							textAlign: "center",
-							margin: "auto"
-						}} to={link.path} key={link.name} className={({ isActive }) => isActive ? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-sky-200 text-sky-800" : "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-slate-400 text-slate-600"} >{link.name}</NavLink>
+					{navLinks.map((link) => (
+						<NavLink
+							style={{
+								textAlign: "center",
+								margin: "auto",
+							}}
+							to={link.path}
+							key={link.name}
+							className={({ isActive }) =>
+								isActive
+									? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-sky-200 text-sky-800"
+									: "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-800 px-2 py-1 text-center dark:text-slate-400 text-slate-600"
+							}
+						>
+							{link.name}
+						</NavLink>
 					))}
 				</nav>
+
 				<div className="hidden md:block">
-				<button
+					<button
 						onClick={(e) => handleTheme(e, setTheme)}
 						id="theme-toggle"
 						type="button"
@@ -66,6 +78,8 @@ export default function Navigator() {
 							className={`${theme === "dark" ? "hidden" : ""} w-5 h-5`}
 							fill="currentColor"
 							viewBox="0 0 20 20"
+							width="24"
+							height="24"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -75,6 +89,8 @@ export default function Navigator() {
 							className={`${theme === "dark" ? "" : "hidden"} w-5 h-5`}
 							fill="currentColor"
 							viewBox="0 0 20 20"
+							width="24"
+							height="24"
 							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
@@ -85,6 +101,39 @@ export default function Navigator() {
 						</svg>
 					</button>
 				</div>
+				<button
+					className="md:hidden hover:scale-110 active:scale-90 transition-transform"
+					type="button"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						className="hidden"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+					<svg
+						height="24px"
+						stroke="currentColor"
+						stroke-width="2"
+						viewBox="0 0 24 24"
+						width="24px"
+						className=" dark:focus:ring-gray-700 dark:text-gray-50 text-sm dark:fill-white"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<line x1="3" x2="21" y1="12" y2="12"></line>
+						<line x1="3" x2="21" y1="6" y2="6"></line>
+						<line x1="3" x2="21" y1="18" y2="18"></line>
+					</svg>
+				</button>
 			</div>
 		</header>
 	);
