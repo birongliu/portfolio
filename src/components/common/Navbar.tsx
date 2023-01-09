@@ -38,7 +38,7 @@ export default function Navigator() {
 
 	return (
 		<header className="backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
-			<div className="flex items-center justify-between max-w-6xl mx-auto md:py-5 py-6 px-12">
+			<div className="flex items-center justify-between max-w-6xl mx-auto md:py-4 py-5 px-8">
 				<a href="/" aria-label="Home">
 					<h1 className="font-bold text-2xl font-hack text-brand-3 dark:text-white">
 						<span className="relative text-brown-11 ">{'< '}</span>
