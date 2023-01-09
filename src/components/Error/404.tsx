@@ -10,7 +10,7 @@ export default function FourOFour() {
 				(404) Page Not Found
 			</h1>
 			<p className="dark:text-slate-400 text-slate-600 relative">
-				Whoops, that page doesn't exist.
+				Whoops, this page doesn't exist.
 			</p>
 			<div className="content-start relative">
 				<button
