@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../../utils/constants";
 
 function scrollUp(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-	if(!event.defaultPrevented) event.preventDefault();
+	if (!event.defaultPrevented) event.preventDefault();
 	window.scrollTo({
 		top: 0,
-		behavior: "smooth"
-	})
+		behavior: "smooth",
+	});
 }
 
 export default function Footer() {
@@ -15,15 +15,16 @@ export default function Footer() {
 		<footer className="p-[23px] shadow md:flex md:items-center md:justify-between md:p-[24px]">
 			<div className="flex items-center flex-col justify-between md:flex-row">
 				<button
-				 onClick={scrollUp}
-				 className=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2">
+					onClick={scrollUp}
+					className=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2"
+				>
 					<svg
 						fill="none"
 						height="24"
 						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth="2"
 						viewBox="0 0 24 24"
 						width="24"
 						className="md:hidden"
