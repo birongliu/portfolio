@@ -7,7 +7,7 @@ export default function FourOFour() {
 	return (
 		<main className="flex items-center my-auto mx-auto flex-col gap-3 justify-center max-w-5xl min-h-screen">
 			<h1 className="text-center dark:text-white font-bold text-3xl relative">
-				404: Page Not Found
+				(404) Page Not Found
 			</h1>
 			<p className="dark:text-slate-400 text-slate-600 relative">
 				Whoops, that page doesn't exist.
