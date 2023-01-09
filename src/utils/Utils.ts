@@ -12,4 +12,19 @@ export default class Utils {
       const currentColorTheme = currentTheme === "dark" ? "#11827" : "#cbd5e1";
       theme.setAttribute("content", currentColorTheme);
    }
+   public static handleTheme(
+      event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+      setTheme: React.Dispatch<React.SetStateAction<Theme | undefined>>,
+   ) {
+      if (!event.defaultPrevented) event.preventDefault();
+      const currentTheme = Utils.getCurrentTheme();
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      const theme = document.querySelector('meta[name="theme-color"]') as Element;
+      if (theme.hasAttribute("content")) theme.removeAttribute("content");
+      Utils.switchMobileTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+      document.documentElement.classList.add(newTheme);
+      document.documentElement.classList.remove(currentTheme);
+      setTheme(newTheme);
+   }
 }
