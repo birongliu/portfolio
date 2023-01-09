@@ -1,11 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../../utils/constants";
+
+function scrollUp(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+	if(!event.defaultPrevented) event.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	})
+}
+
 export default function Footer() {
 	return (
 		<footer className="p-[23px] shadow md:flex md:items-center md:justify-between md:p-[24px]">
 			<div className="flex items-center flex-col justify-between md:flex-row">
-				<button className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2">
+				<button
+				 onClick={scrollUp}
+				 className=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2">
 					<svg
 						fill="none"
 						height="24"
