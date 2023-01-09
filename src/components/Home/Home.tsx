@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
 	return (
 		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen py-20">
-		<div className="relative -top-10 md:top-0 bottom-30">
+		<div className="relative bottom-30">
 			<div className="flex m-6 justify-center">
 				<img
 					className="rounded-full h-48 sm:h-48 sm:w-48 leading-normal sm:text-6xl"
@@ -13,10 +13,12 @@ export default function Home() {
 				<span id="circle" className="border-blue-500 dark:border-blue-400 rounded-full absolute border-2 border-full h-[calc(50%+44.5px)] top-5 w-[calc(50%+62.5px)]"></span>
 
 			</div>
-			<h1 className="font-bold dark:text-white text-4xl text-center">
+			<div className="text-center">
+			<h1 className="font-bold dark:text-white text-4xl px-0">
 				Bi Rong Liu
 			</h1>
-			<p className="text-center text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
+			<p className="text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
+			</div>
 			</div>
 		</main>
 	);
