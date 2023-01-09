@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
 	return (
 		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen py-20">
-		<div className="relative bottom-[4rem]">
+		<div className="relative -top-10 bottom-30">
 			<div className="flex m-6 justify-center">
 				<img
 					className="rounded-full h-48 sm:h-48 sm:w-48 leading-normal sm:text-6xl"
