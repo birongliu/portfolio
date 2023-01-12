@@ -16,15 +16,13 @@ export default class Utils {
       event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
       setTheme: React.Dispatch<React.SetStateAction<Theme | undefined>>,
    ) {
-      if (!event.defaultPrevented) event.preventDefault();
+      if(!event.defaultPrevented) event.preventDefault();
       const currentTheme = Utils.getCurrentTheme();
       const newTheme = currentTheme === "dark" ? "light" : "dark";
-      const theme = document.querySelector('meta[name="theme-color"]') as Element;
-      if (theme.hasAttribute("content")) theme.removeAttribute("content");
-      Utils.switchMobileTheme(newTheme);
       localStorage.setItem("theme", newTheme);
+      Utils.switchMobileTheme(newTheme)
       document.documentElement.classList.add(newTheme);
       document.documentElement.classList.remove(currentTheme);
-      setTheme(newTheme);
+      setTheme(newTheme)
    }
 }

@@ -13,7 +13,7 @@ export default function Navigator() {
 		Utils.switchMobileTheme(currentTheme);
 		document.documentElement.classList.add(currentTheme);
 		setTheme(currentTheme);
-	}, []);
+	}, [theme]);
 
 	return (
 		<header className="backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">

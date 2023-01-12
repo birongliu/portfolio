@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card() {
 	return (
-		<ul className="gap-8 grid grid-cols-1 lg:grid-cols-3 place-items-stretch pt-12 sm:grid-cols-2">
+		<ul className="gap-8 grid grid-cols-1 lg:grid-cols-3 place-items-stretch pt-12 sm:grid-cols-2 mb-10">
 			{buildCard.map((card) => (
 				<li className="animate-pop">
 					<section className="flex flex-col dark:bg-gray-800 h-full hover:-translate-y-2 hover:shadow-xl overflow-hidden relative rounded-xl shadow-md transition-[box-shadow,transform]">
@@ -19,12 +19,11 @@ export default function Card() {
 						</div>
 						<div className="px-3 py-2">
 							{card.tags.map((tag) => (
-								<span key={tag} className="text-xs font-semibold inline-block py-1 px-2 rounded-full text-black bg-blue-400  last:mr-0 mr-1">
+								<span key={tag} className="text-xs font-semibold inline-block py-1 px-2 rounded text-black bg-blue-400  last:mr-0 mr-1">
 									#{tag}
 								</span>
 							))}
 						</div>
-                 
 					</section>
 				</li>
 			))}
