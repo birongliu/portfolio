@@ -3,8 +3,8 @@ import Card from "./Card";
 
 export default function Project() {
 	return (
-		<main className="mx-auto px-8 max-w-5xl min-h-screen py-20">
-			<form className="flex items-center mt-5">
+		<main className="px-8 max-w-5xl mx-5 lg:mx-auto min-h-screen py-20">
+			<form className="flex items-center mt-5 ">
 				<label htmlFor="simple-search" className="sr-only">
 					Search
 				</label>
