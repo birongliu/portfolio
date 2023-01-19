@@ -46,6 +46,7 @@ export default function Card({
 						<div className="relative border-l ml-3 border-gray-400 dark:border-gray-700">
 							<div className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
 								<h2>Visibility: {card.metadata.private ? "Private" : "Public"}</h2>
+								<h2 className={card.metadata.private ? "hidden" : ""}>Number of Stars: {card.metadata.star}</h2>
 								<h2>Language: {card.metadata.language}</h2>
 								<h2>Timestamp: {card.metadata.createdAt}</h2>
 							</div>
