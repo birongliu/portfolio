@@ -9,9 +9,11 @@ import {
 	Contact,
 	Project,
 } from "./components";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 export default function App() {
 	return (
+		<QueryClientProvider client={new QueryClient()}> 
 		<div className="dark:bg-gray-900 bg-slate-300">
 			<Navbar />
 			<main>
@@ -26,5 +28,6 @@ export default function App() {
 			</main>
 			<Footer />
 		</div>
+		</QueryClientProvider>
 	);
 }

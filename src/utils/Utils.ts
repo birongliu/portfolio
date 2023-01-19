@@ -1,4 +1,5 @@
-import { Theme } from "./Types";
+import axios from "axios";
+import { GithubRepoDataOptions, Theme } from "./Types";
 
 export default class Utils {
    public static getCurrentTheme(): Theme {
@@ -11,6 +12,26 @@ export default class Utils {
       const theme = (document.querySelector('meta[name="theme-color"]') as Element);
       const currentColorTheme = currentTheme === "dark" ? "#11827" : "#cbd5e1";
       theme.setAttribute("content", currentColorTheme);
+   }
+   public static async getGithubRepo() {
+      const headers = {
+         headers: {
+            "Accept": "application/vnd.github+json",
+            'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
+         }
+      };
+      const response = await axios.get('https://api.github.com/search/repositories?q=user:birongliu', headers);
+      const repos = response.data.items as GithubRepoDataOptions[];
+      console.log(repos)
+      return repos.filter(e => e.private || (!e.private && e.stargazers_count > 0));
+   }
+   public static toProperCase(str: string) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+   }
+   public static generateRandomKey() {
+      const array = new Uint32Array(10);
+      const data = crypto.getRandomValues(array);
+      return data[Math.floor(Math.random() * data.length)]
    }
    public static handleTheme(
       event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
