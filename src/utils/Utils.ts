@@ -22,7 +22,6 @@ export default class Utils {
       };
       const response = await axios.get('https://api.github.com/search/repositories?q=user:birongliu', headers);
       const repos = response.data.items as GithubRepoDataOptions[];
-      console.log(repos)
       return repos.filter(e => e.private || (!e.private && e.stargazers_count > 0));
    }
    public static toProperCase(str: string) {
