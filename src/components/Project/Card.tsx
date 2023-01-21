@@ -11,7 +11,7 @@ export default function Card({
 		<ul className="gap-6 lg:gap-8 md:gap-4 grid grid-cols-1 lg:grid-cols-3 place-items-stretch pt-12 md:grid-cols-2 sm:grid-cols-1">
 			{data.map((card) => (
 				<li key={Utils.generateRandomKey()} className="animate-pop">
-					<section className="flex flex-col dark:bg-slate-800 h-full hover:-translate-y-3 hover:shadow-4xl overflow-hidden relative rounded-xl shadow-md transition-[box-shadow,transform] last:right-2">
+					<section className="flex flex-col dark:bg-slate-800 h-full hover:-translate-y-2 hover:shadow-4xl overflow-hidden relative rounded-xl shadow-md transition-[box-shadow,transform] last:right-2">
 						<div className="relative">
 							<img
 								className="h-auto w-full"
@@ -45,10 +45,9 @@ export default function Card({
 						<span className="flex w-3 h-3 bg-gray-200 dark:bg-blue-600 rounded-full ml-[6px]" />
 						<div className="relative border-l ml-3 border-gray-400 dark:border-gray-700">
 							<div className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
-								<h2>Visibility: {card.metadata.private ? "Private" : "Public"}</h2>
 								<h2 className={card.metadata.private ? "hidden" : ""}>Number of Stars: {card.metadata.star}</h2>
 								<h2>Language: {card.metadata.language}</h2>
-								<h2>Timestamp: {card.metadata.createdAt}</h2>
+								<h2>CreatedAt: {card.metadata.createdAt}</h2>
 							</div>
 						</div>
 					</section>
