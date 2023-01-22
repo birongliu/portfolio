@@ -73,6 +73,7 @@ export default function Project() {
 					</div>
 					<input
 						type="search"
+						onFocus={e => e.preventDefault()}
 						onInvalid={e => e.currentTarget.validity.valueMissing ? e.currentTarget.setCustomValidity("Please provide a search term") : e.currentTarget.setCustomValidity("")}
 						id="simple-search"
 						onChange={e => e.target.value.length ? setSearch(e.target.value) : setProject(projects)}
