@@ -2,12 +2,13 @@ import React from "react";
 import { navLinks } from "../../../utils/constants";
 import { NavLink } from "react-router-dom";
 
-export default function NavLinks() {
+export default function NavLinks({ setNavigate }: { setNavigate: React.Dispatch<React.SetStateAction<boolean>> }) {
 	return (
 		<>
 			{navLinks.map((link) => (
 				<NavLink
 					to={link.path}
+					onClick={() => setNavigate(prev => !prev)}
 					key={link.name}
 					className={({ isActive }) =>
 						`${

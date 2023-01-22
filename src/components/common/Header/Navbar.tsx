@@ -26,13 +26,13 @@ export default function Navigator() {
 					</h1>
 				</a>
 				<div className={`md:hidden -z-10 ${!navigate ? "hidden" : ""}`}>
-					<div className="backdrop-blur bg-opacity-50 dark:bg-opacity-50 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 animate-[menu_7s_ease]">
-						<NavLinks />
+					<nav className={` backdrop-blur bg-opacity-50 dark:bg-opacity-50 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 animate-[menu_7s_ease]`}>
+						<NavLinks setNavigate={setNavigate} />
 						<ThemeSwitcher theme={theme} setTheme={setTheme} />
-					</div>
+					</nav>
 				</div>
-				<nav className="hidden md:block space-x-3 relative right-11">
-					<NavLinks />
+				<nav className="hidden md:block space-x-3 relative right-1">
+					<NavLinks setNavigate={setNavigate}/>
 				</nav>
 				<div className="hidden md:block">
 					<ThemeSwitcher theme={theme} setTheme={setTheme} />
