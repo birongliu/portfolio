@@ -1,16 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Utils from "../../utils/Utils";
 import Card from "./Card";
-import { CardDataOptions, GithubCardMetaData, GithubRepoDataOptions } from "../../utils/Types";
+import {
+	CardDataOptions,
+	GithubCardMetaData,
+	GithubRepoDataOptions,
+} from "../../utils/Types";
 import { images } from "../../utils/constants";
+import { useEffect } from "react";
+import FourOFour from "../Error/404";
 
-const resolveToCard = (data: GithubRepoDataOptions[]): CardDataOptions<GithubCardMetaData>[] => {
+const resolveToCard = (
+	data: GithubRepoDataOptions[] | undefined,
+): CardDataOptions<GithubCardMetaData>[] => {
+	if (!data) return [];
 	return data.map((repo) => ({
 		id: repo.id,
 		title: repo.name,
 		topics: repo.topics,
-		metadata: { language: repo.language, private: repo.private, star: repo.stargazers_count, createdAt: Intl.DateTimeFormat("en-US").format(new Date(repo.created_at)) },
+		metadata: {
+			language: repo.language,
+			private: repo.private,
+			star: repo.stargazers_count,
+			createdAt: Intl.DateTimeFormat("en-US").format(new Date(repo.created_at)),
+		},
 		description: repo.description,
 		image:
 			images.find((e) => e.id === Utils.toProperCase(repo.name))?.url ??
@@ -19,10 +33,25 @@ const resolveToCard = (data: GithubRepoDataOptions[]): CardDataOptions<GithubCar
 };
 
 export default function Project() {
-	const { data, isError, isFetched } = useQuery("fetchRepo", Utils.getGithubRepo);
+	const { data: projects } = useQuery("fetchRepo", {
+		queryFn: async () => await Utils.getGithubRepo(),
+	});
+	const [project, setProject] = useState<GithubRepoDataOptions[] | undefined>(
+		[],
+	);
+	const [search, setSearch] = useState("");
+	useEffect(() => setProject(projects), [projects]);
+
+	function onFormComplete(event: React.FormEvent<HTMLFormElement>) {
+		if(!event.defaultPrevented) event.preventDefault();
+		const filteredProject = projects && projects.filter(project => project.name.toLowerCase() === search.toLowerCase())
+		setProject(filteredProject);
+	}
+
+
 	return (
 		<main className="px-9 max-w-5xl mx-3 md:min-w-min lg:mx-auto min-h-screen py-20">
-			<form className="flex items-center mt-5">
+			<form id="searchForm" onSubmit={onFormComplete} className="flex items-center mt-5">
 				<label htmlFor="simple-search" className="sr-only">
 					Search
 				</label>
@@ -43,16 +72,18 @@ export default function Project() {
 						</svg>
 					</div>
 					<input
-						type="text"
+						type="search"
+						onInvalid={e => e.currentTarget.validity.valueMissing ? e.currentTarget.setCustomValidity("Please provide a search term") : e.currentTarget.setCustomValidity("")}
 						id="simple-search"
-						className="dark:text-white  rounded-xl bg-slate-200 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						placeholder="Search"
+						onChange={e => e.target.value.length ? setSearch(e.target.value) : setProject(projects)}
+						className="dark:text-white rounded-xl bg-slate-200 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+						placeholder="Search for project by name or tags"
 						required
 					/>
 				</div>
 				<button
+					form="searchForm"
 					type="submit"
-					onClick={e => e.preventDefault()}
 					className="rounded-full p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 				>
 					<svg
@@ -72,7 +103,11 @@ export default function Project() {
 					<span className="sr-only">Search</span>
 				</button>
 			</form>
-			{!isError && isFetched && data && <Card data={resolveToCard(data)} />}
+			{project && project.length ? (
+				<Card data={resolveToCard(project)} />
+			) : (
+				<FourOFour />
+			)}
 		</main>
 	);
 }
