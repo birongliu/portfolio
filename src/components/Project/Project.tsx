@@ -82,7 +82,6 @@ export default function Project() {
 						required
 					/>
 				</div>
-				
 			</form>
 			{project && project.length ? (
 				<Card data={resolveToCard(project)} />
