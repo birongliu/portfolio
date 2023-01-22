@@ -30,20 +30,18 @@ export default function Card({
 							{card.topics.map((tag) => (
 								<span
 									key={Utils.generateRandomKey()}
-									className="capitalize text-xs font-semibold inline-block py-1 px-2 rounded text-black bg-blue-400  last:mr-0 mr-1"
+									className="capitalize text-xs font-semibold inline-block py-1 px-2 rounded text-black bg-blue-400 mr-1 first:-ml-1"
 								>
 									#{tag}
 								</span>
 							))}
 						</div>
-						<span className="flex w-3 h-3 bg-gray-200 dark:bg-blue-600 rounded-full ml-[6px]"></span>
-						<div className="relative border-l ml-3 border-gray-400 dark:border-gray-700">
+						<div>
+							<h2 className="ml-2 text-base font-bold text-gray-600 dark:text-gray-400 underline">Description</h2>
 							<p className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
 								{card.description}
 							</p>
-						</div>
-						<span className="flex w-3 h-3 bg-gray-200 dark:bg-blue-600 rounded-full ml-[6px]" />
-						<div className="relative border-l ml-3 border-gray-400 dark:border-gray-700">
+							<h2 className="ml-2 text-base font-bold text-gray-600 dark:text-gray-400 underline">Project Info</h2>
 							<div className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
 								<h2 className={card.metadata.private ? "hidden" : ""}>Number of Stars: {card.metadata.star}</h2>
 								<h2>Language: {card.metadata.language}</h2>
