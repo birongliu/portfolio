@@ -19,7 +19,7 @@ export default function Home() {
 			</h1>
 			<p className="text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
 			</div>
-			</div>
+		</div>
 		</main>
 	);
 }
