@@ -11,7 +11,7 @@ export default function Card({
 		<ul className="gap-6 lg:gap-8 md:gap-4 grid grid-cols-1 lg:grid-cols-3 place-items-stretch pt-12 md:grid-cols-2 sm:grid-cols-1">
 			{data.map((card) => (
 				<li key={Utils.generateRandomKey()} className="animate-pop">
-					<section className="flex flex-col dark:bg-slate-800 h-full hover:-translate-y-2 hover:shadow-4xl overflow-hidden relative rounded-xl shadow-md transition-[box-shadow,transform] last:right-2">
+					<section className="flex flex-col dark:bg-slate-800 h-full hover:-translate-y-2 hover:shadow-4xl overflow-hidden relative rounded-xl shadow-md transition-[box-shadow,transform]">
 						<div className="relative">
 							<img
 								className="h-auto w-full"
