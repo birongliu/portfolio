@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GithubRepoDataOptions, Theme } from "./Types";
+import { GithubRepoDataOptions, GithubRepoResultOptions, ImageOptions, Theme } from "./Types";
 
 export default class Utils {
    public static getCurrentTheme(): Theme {
@@ -13,7 +13,7 @@ export default class Utils {
       const currentColorTheme = currentTheme === "dark" ? "#11827" : "#cbd5e1";
       theme.setAttribute("content", currentColorTheme);
    }
-   public static async getGithubRepo() {
+   public static async getGithubRepo(): Promise<GithubRepoResultOptions[]> {
       const headers = {
          headers: {
             "Accept": "application/vnd.github+json",
@@ -22,7 +22,17 @@ export default class Utils {
       };
       const response = await axios.get('https://api.github.com/search/repositories?q=user:birongliu', headers);
       const repos = response.data.items as GithubRepoDataOptions[];
-      return repos.filter(e => e.private || (!e.private && e.stargazers_count > 0));
+      return repos
+         .filter(project => images.some(image => image.name.toLowerCase() === project.name.toLowerCase()))
+         .map(project => ({
+            id: project.id,
+            name: project.name,
+            language: project.language,
+            topics: project.topics,
+            createdAt: Intl.DateTimeFormat("en-US").format(new Date(project.created_at)),
+            description: project.description,
+            image: images.find(e => e.name.toLowerCase() === project.name.toLowerCase()) ?? { name: "lol", url: ""}
+         }));
    }
    public static toProperCase(str: string) {
       return str.charAt(0).toUpperCase() + str.slice(1);
@@ -46,3 +56,12 @@ export default class Utils {
       setTheme(newTheme)
    }
 }
+ const images: ImageOptions[] = [
+   {
+      name: Utils.toProperCase("discord.js-button-paginator-advanced"),
+      url: "https://cdn.discordapp.com/attachments/473528924027224075/1065307808251248731/Screenshot_2023-01-18_at_11.32.49_AM.png"
+   },
+   {
+      name: Utils.toProperCase("personalWebsite"),
+      url: "https://cdn.discordapp.com/attachments/473528924027224075/1065307808251248731/Screenshot_2023-01-18_at_11.32.49_AM.png"
+}]
