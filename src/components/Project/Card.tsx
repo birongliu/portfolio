@@ -43,7 +43,6 @@ export default function Card({
 							</p>
 							<h2 className="ml-2 text-base font-bold text-gray-600 dark:text-gray-400 underline">Project Info</h2>
 							<div className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
-								<h2 className={card.metadata.private ? "hidden" : ""}>Number of Stars: {card.metadata.star}</h2>
 								<h2>Language: {card.metadata.language}</h2>
 								<h2>CreatedAt: {card.metadata.createdAt}</h2>
 							</div>
