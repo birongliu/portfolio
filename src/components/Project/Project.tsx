@@ -54,8 +54,9 @@ export default function Project() {
 	function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
 		if (!event.defaultPrevented) event.preventDefault();
 		if(!event.target.value.length) return setSearch({isError: false, query: "", result: resolver(data ?? [])})
-		setSearch((prev) => {
-			return {...prev, query: event.target.value };
+		return setSearch((prev) => {
+			if(!prev.isError && !prev.result.length) return { query: "", result: resolver(data ?? []), isError: false }
+			return {...prev, query: event.target.value, };
 		});
 	}
 	function handleOnSubmit(event: React.FormEvent<HTMLFormElement>) {
