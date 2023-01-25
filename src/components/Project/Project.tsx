@@ -55,7 +55,7 @@ export default function Project() {
 		if (!event.defaultPrevented) event.preventDefault();
 		if(!event.target.value.length) return setSearch({isError: false, query: "", result: resolver(data ?? [])})
 		return setSearch((prev) => {
-			if(!prev.isError && !prev.result.length) return { query: "", result: resolver(data ?? []), isError: false }
+			if(!prev.isError && !prev.result.length) return { query: event.target.value, result: resolver(data ?? []), isError: false }
 			return {...prev, query: event.target.value, };
 		});
 	}
