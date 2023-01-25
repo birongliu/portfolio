@@ -10,23 +10,29 @@ export interface CardDataOptions<T extends object> {
 }
 
 export interface GithubCardMetaData {
-   star: number,
    createdAt: string
    language: string,
-   private: boolean,
 }
 export interface GithubRepoDataOptions {
    private: boolean,
    created_at: string,
    id: string,
    description: string,
-   stargazers_count: number,
    topics: string[]
    language: string
    name: string
 }
 
+export interface GithubRepoResultOptions {
+   id: string
+   name: string
+   language: string
+   topics: string[]
+   createdAt: string
+   description: string
+   image: ImageOptions
+}
 export interface ImageOptions {
-   id: string,
+   name: string,
    url: string,
 }
