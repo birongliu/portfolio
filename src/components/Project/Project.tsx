@@ -73,7 +73,9 @@ export default function Project() {
 			: setSearch({ ...search, isError: true, error: search.query });
 	}
 	return (
-		<main className="px-9 max-w-5xl mx-3 md:min-w-min lg:mx-auto min-h-screen py-20">
+		<main 
+		onScroll={() => (document.activeElement as HTMLElement).blur()}
+		className="px-9 max-w-5xl mx-3 md:min-w-min lg:mx-auto min-h-screen py-20">
 			<form
 				onSubmit={handleOnSubmit}
 				id="searchForm"
