@@ -7,7 +7,7 @@ export default function NotFound({ errorMessage }: {  errorMessage: string }) {
 				(404) Project Not Found
 			</h1>
 			<p className="dark:text-slate-400 text-slate-600 relative text-center">
-            Whoops, There is no project name or tags matches the query: <span className="font-bold">{errorMessage}</span>.
+            Whoops, There is no project name or tags matches the query: <span className="font-bold text-center break-normal">{errorMessage}</span>.
 			</p>
 		</main>
 	);
