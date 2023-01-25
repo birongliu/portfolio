@@ -48,7 +48,7 @@ export default function Project() {
 		SearchFailureResult | SearchSuccessResult
 	>({
 		isError: false,
-		result: [],
+		result: resolver(data ?? []),
 		query: "",
 	});
 	function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
