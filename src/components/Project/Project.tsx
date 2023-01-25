@@ -48,7 +48,7 @@ export default function Project() {
 		SearchFailureResult | SearchSuccessResult
 	>({
 		isError: false,
-		result: resolver(data ?? []),
+		result: [],
 		query: "",
 	});
 	function handleOnChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -116,7 +116,7 @@ export default function Project() {
 				</div>
 			</form>
 			{!search.isError ? (
-				data && <Card data={search.result} />
+				data && <Card data={search.query.length ? search.result : resolver(data)} />
 			) : (
 				<NotFound errorMessage={search.error} />
 			)}
