@@ -6,8 +6,10 @@ export default function Home() {
 		<div className="relative bottom-30">
 			<div className="flex m-6 justify-center">
 				<img
-					className="rounded-full h-48 sm:h-48 sm:w-48 leading-normal sm:text-6xl"
+					className="rounded-full leading-normal"
 					alt="icon"
+					width="192px"
+					height="192px"
 					src="https://cdn.discordapp.com/avatars/358382764959203338/d175e81df15d96edfc1d68a067e4a138.webp?size=512"
 				></img>
 				<span id="circle" className="border-blue-500 dark:border-blue-400 rounded-full absolute border-2 border-full h-[calc(50%+44.5px)] top-5 w-[calc(50%+62.5px)]"></span>
