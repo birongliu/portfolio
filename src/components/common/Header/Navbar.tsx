@@ -31,7 +31,7 @@ export default function Navigator() {
 						<ThemeSwitcher theme={theme} setTheme={setTheme} />
 					</nav>
 				</div>
-				<nav className="hidden md:block space-x-3 relative right-1">
+				<nav className="hidden md:block space-x-3 relative right-[49px]">
 					<NavLinks setNavigate={setNavigate}/>
 				</nav>
 				<div className="hidden md:block">
