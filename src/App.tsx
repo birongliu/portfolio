@@ -14,7 +14,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 export default function App() {
 	return (
 		<QueryClientProvider client={new QueryClient()}> 
-		<div className="dark:bg-gray-900 bg-slate-300">
+		<div className="dark:bg-gray-900 bg-slate-300 min-h-screen">
 			<Navbar />
 			<main>
 				<Routes>
