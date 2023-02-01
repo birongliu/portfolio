@@ -29,7 +29,7 @@ export default class Utils {
             name: project.name,
             language: project.language,
             topics: project.topics,
-            updatedAt: Intl.DateTimeFormat("en-US").format(new Date(project.updated_at)),
+            updatedAt: Intl.DateTimeFormat("en-US").format(new Date(project.pushed_at)),
             createdAt: Intl.DateTimeFormat("en-US").format(new Date(project.created_at)),
             description: project.description,
             image: images.find(e => e.name.toLowerCase() === project.name.toLowerCase()) ?? { name: "lol", url: ""}
