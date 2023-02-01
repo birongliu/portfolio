@@ -12,6 +12,7 @@ export interface CardDataOptions<T extends object> {
 export interface GithubCardMetaData {
    createdAt: string
    language: string,
+   updatedAt: string
 }
 export interface GithubRepoDataOptions {
    private: boolean,
