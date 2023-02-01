@@ -16,6 +16,7 @@ export interface GithubCardMetaData {
 export interface GithubRepoDataOptions {
    private: boolean,
    created_at: string,
+   updated_at: string,
    id: string,
    description: string,
    topics: string[]
@@ -30,6 +31,7 @@ export interface GithubRepoResultOptions {
    language: string
    topics: string[]
    createdAt: string
+   updatedAt: string
    description: string
    image: ImageOptions
 }
