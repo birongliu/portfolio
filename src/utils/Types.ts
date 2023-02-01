@@ -1,11 +1,11 @@
 export type Theme = "dark" | "light"
 
 export interface CardDataOptions<T extends object> {
-	image: string;
-	title: string;
+   image: string;
+   title: string;
    id: string
-	description: string;
-	topics: string[];
+   description: string;
+   topics: string[];
    metadata: T;
 }
 
@@ -20,7 +20,8 @@ export interface GithubRepoDataOptions {
    description: string,
    topics: string[]
    language: string
-   name: string
+   name: string,
+
 }
 
 export interface GithubRepoResultOptions {
