@@ -45,6 +45,7 @@ export default function Card({
 							<div className="mb-2 ml-2 text-base font-normal text-gray-600 dark:text-gray-400">
 								<h2>Language: {card.metadata.language}</h2>
 								<h2>CreatedAt: {card.metadata.createdAt}</h2>
+                                                                <h2>UpdatedAt: {card.metadata.updatedAt}</h2>
 							</div>
 						</div>
 					</section>
