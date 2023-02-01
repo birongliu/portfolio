@@ -19,6 +19,7 @@ const resolver = (
 		metadata: {
 			createdAt: project.createdAt,
 			language: project.language,
+                        updatedAt: project.updatedAt
 		},
 	}));
 };
