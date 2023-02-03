@@ -59,7 +59,7 @@ export default function Contact() {
 					</form>
 				</div>
 				<div>
-				<h2 className="text-center font-bold text-lg mt-5">Social Media</h2>
+				<h2 className="text-center font-bold text-lg mt-">Social Media</h2>
 				
 				</div>
 			</div>
