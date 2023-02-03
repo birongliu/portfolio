@@ -12,7 +12,7 @@ function scrollUp(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 
 export default function Footer() {
 	return (
-		<footer className="p-[23px] shadow md:flex md:items-center md:justify-between md:p-[24px]">
+		<footer className="p-[23px] md:flex md:items-center md:justify-between md:p-[24px]">
 			<div className="flex items-center flex-col justify-between md:flex-row">
 				<button
 					onClick={scrollUp}
