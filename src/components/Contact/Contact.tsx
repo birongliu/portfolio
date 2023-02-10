@@ -9,7 +9,7 @@ interface ContactOptions {
 
 export default function Contact() {
 	return (
-		<main className="max-w-5xl mx-3 md:min-w-min lg:mx-auto min-h-screen p-20 mt-10">
+		<main className="max-w-5xl min-w-max mx-auto min-h-screen p-20 mt-10">
 			<div className="grid md:grid-cols-2 grid-cols-1 dark:text-white">
 				<div>
 					<h2 className="text-center font-bold text-lg">Contact Form</h2>
@@ -52,14 +52,14 @@ export default function Contact() {
 						></textarea>
 						<button
 							type="submit"
-							className="border-rounded  w-full mt-2 rounded-md dark:bg-slate-500 bg-slate-400"
+							className="border-rounded p-1 w-full mt-2 rounded-md dark:bg-slate-500 bg-slate-400"
 						>
 							Submit
 						</button>
 					</form>
 				</div>
 				<div>
-				<h2 className="text-center font-bold text-lg mt-">Social Media</h2>
+				<h2 className="text-center font-bold text-lg mt-2 md:mt-0">Social Media</h2>
 				
 				</div>
 			</div>
