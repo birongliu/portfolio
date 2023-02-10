@@ -9,7 +9,7 @@ interface ContactOptions {
 
 export default function Contact() {
 	return (
-		<main className="max-w-5xl min-w-max mx-auto min-h-screen p-20 mt-10">
+		<main className="max-w-5xl mx-auto min-h-screen md:p-20 pt-20 px-10 mt-10">
 			<div className="grid md:grid-cols-2 grid-cols-1 dark:text-white">
 				<div>
 					<h2 className="text-center font-bold text-lg">Contact Form</h2>
