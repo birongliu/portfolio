@@ -36,7 +36,7 @@ export default function Contact() {
 							</span>
 							<input
 								id="name"
-								className="py-1 focus:outline-none focus:ring-0 focus:border-blue-500 border w-full bg-transparent outline-none pl-2 rounded-r-lg border-gray-600 "
+								className="py-1 focus:outline-none focus:ring-0 focus:border-blue-500 border w-full bg-transparent outline-none pl-1 rounded-r-lg border-gray-600"
 								placeholder="Your name"
 								type="text"
 								onChange={(event) =>
@@ -62,7 +62,7 @@ export default function Contact() {
 							</span>
 							<input
 								id="Email"
-								className="focus:outline-none focus:ring-0 focus:border-blue-600 border w-full bg-transparent outline-none pl-2 rounded-r-lg border-gray-600"
+								className="focus:outline-none focus:ring-0 focus:border-blue-600 border w-full bg-transparent outline-none pl-1 rounded-r-lg border-gray-600"
 								placeholder="Your Email"
 								type="email"
 								required
