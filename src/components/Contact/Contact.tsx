@@ -20,7 +20,6 @@ export default function Contact() {
 		event.preventDefault();
 		console.log(contacts);
 	}
-	const navigate = useNavigate();
 	return (
 		<main className="max-w-5xl mx-auto min-h-screen md:p-20 pt-20 px-10 mt-10">
 			<div className="grid md:grid-cols-2 grid-cols-1 dark:text-white">
