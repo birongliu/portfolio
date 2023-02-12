@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import lightgithub from "../../images/github-mark-white.png"
-import linkedIn from "../../images/LinkedIn.png";
+import linkedIn from "../../images/Linkedin.png";
 import Utils from "../../utils/Utils";
 
 interface ContactFormData {
@@ -99,15 +99,15 @@ export default function Contact() {
 						Follow me on Social Media.
 					</h2>
 					<div className="grid justify-center">
-						<ul className="text-center">
-							<li className="inline-block px-4 py-2">
+						<ul className="text-center py-3">
+							<li className="inline-block px-4">
 							<a href="https://github.com/birongliu">
 								<img className="w-20 h-20" src={lightgithub} alt="github" />
 							</a>
 							</li>
-							<li className="inline-block px-4 py-2">
+							<li className="inline-block px-4">
 							<a href="https://www.linkedin.com/in/birongliu">
-								<img className="h-20 w-22" src={linkedIn} alt="github"></img>
+								<img className="w-20 h-20" src={linkedIn} alt="linkedin" />
 							</a>
 							</li>
 						</ul>
