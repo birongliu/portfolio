@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import github from "../../images/github-mark.png";
+import lightgithub from "../../images/github-mark-white.png"
 import linkedIn from "../../images/LinkedIn.png";
-import { useNavigate } from "react-router-dom";
+import Utils from "../../utils/Utils";
 
 interface ContactFormData {
 	name: string;
@@ -15,11 +15,12 @@ export default function Contact() {
 		email: "",
 		message: "",
 	});
-
 	function onFormSubmit(event: React.FormEvent) {
 		event.preventDefault();
 		console.log(contacts);
 	}
+	const theme = Utils.getCurrentTheme();
+	console.log(theme)
 	return (
 		<main className="max-w-5xl mx-auto min-h-screen md:p-20 pt-20 px-10 mt-10">
 			<div className="grid md:grid-cols-2 grid-cols-1 dark:text-white">
@@ -101,7 +102,7 @@ export default function Contact() {
 						<ul className="text-center">
 							<li className="inline-block px-4 py-2">
 							<a href="https://github.com/birongliu">
-								<img className="w-20 h-20" src={github} alt="github"></img>
+								<img className="w-20 h-20" src={lightgithub} alt="github" />
 							</a>
 							</li>
 							<li className="inline-block px-4 py-2">
