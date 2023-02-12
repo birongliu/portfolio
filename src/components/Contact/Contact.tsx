@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import lightgithub from "../../images/github-mark-white.png"
-import linkedIn from "../../images/Linkedin.png";
+import linkedIn from "../../images/LinkedIn.png";
 import Utils from "../../utils/Utils";
 
 interface ContactFormData {
