@@ -11,7 +11,6 @@ export default function Home() {
 				></img>
 				<h1 className="font-bold dark:text-white text-4xl pt-1">Bi Rong Liu</h1>
 				<p className="text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
-
 			</div>
 		</main>
 	);
