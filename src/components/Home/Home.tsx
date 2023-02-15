@@ -3,25 +3,16 @@ import React from "react";
 export default function Home() {
 	return (
 		<main className="flex items-center mx-auto px-8 flex-col gap-6 justify-center max-w-5xl min-h-screen py-20">
-		<div className="relative bottom-30">
-			<div className="flex m-6 justify-center">
-				<img
-					className="rounded-full leading-normal"
-					alt="icon"
-					width="192px"
-					height="192px"
+			<div className="grid place-items-center">
+			<img
+					className="w-[11rem] rounded-full p-[4px] bg-gradient-to-r from-green-400 to-blue-500 dark:from-orange-500 dark:to-blue-400"
+					alt="profile"
 					src="https://cdn.discordapp.com/avatars/358382764959203338/d175e81df15d96edfc1d68a067e4a138.webp?size=512"
 				></img>
-				<span id="circle" className="border-blue-500 dark:border-blue-400 rounded-full absolute border-2 border-full h-[calc(50%+44.5px)] top-5 w-[calc(50%+62.5px)]"></span>
+				<h1 className="font-bold dark:text-white text-4xl pt-1">Bi Rong Liu</h1>
+				<p className="text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
 
 			</div>
-			<div className="text-center">
-			<h1 className="font-bold dark:text-white text-4xl px-0">
-				Bi Rong Liu
-			</h1>
-			<p className="text-2xl dark:text-slate-400 text-slate-600">Computer Science Student</p>
-			</div>
-		</div>
 		</main>
 	);
 }
