@@ -16,7 +16,7 @@ export default function Navigator() {
 	}, [theme]);
 
 	return (
-		<header className="backdrop-blur bg-opacity-70 dark:bg-opacity-70 fixed left-0 right-0 top-0 z-10">
+		<header className="bg-white bg-opacity-0 backdrop-blur dark:backdrop-blur-md sticky top-0 z-10">
 			<div className="flex items-center justify-between max-w-7xl mx-auto md:py-5 py-6 px-12">
 				<a href="/" aria-label="Home">
 					<h1 className="font-bold text-2xl font-hack m-0 text-brand-3 dark:text-white">
@@ -25,14 +25,16 @@ export default function Navigator() {
 						<span className="relative text-brown-11">{" />"}</span>
 					</h1>
 				</a>
-				<div className={`md:hidden -z-10 ${!navigate ? "hidden" : ""}`}>
-					<nav className={` backdrop-blur bg-opacity-50 dark:bg-opacity-50 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 animate-[menu_7s_ease]`}>
+				<div className={`md:hidden ${!navigate ? "hidden" : ""}`}>
+					<nav
+						className={`backdrop-blur dark:backdrop-blur-md bg-white bg-opacity-0 dark:bg-opacity-0 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 animate-[menu_7s_ease]`}
+					>
 						<NavLinks setNavigate={setNavigate} />
 						<ThemeSwitcher theme={theme} setTheme={setTheme} />
 					</nav>
 				</div>
 				<nav className="hidden md:block space-x-3 relative right-[49px]">
-					<NavLinks setNavigate={setNavigate}/>
+					<NavLinks setNavigate={setNavigate} />
 				</nav>
 				<div className="hidden md:block">
 					<ThemeSwitcher theme={theme} setTheme={setTheme} />
