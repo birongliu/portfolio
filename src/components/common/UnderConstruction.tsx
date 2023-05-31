@@ -8,7 +8,7 @@ export default function UnderConstruction() {
 			  🚧 Under Construction 🚧
 			</h1>
 			<p className="dark:text-slate-400 text-slate-600 font-bold mt-4">
-			  This page is currently under construction. Please check back soon for updates.
+			  This page is currently under construction. Please check back later for updates.
 			</p>
 		 </div>
 	  </main>
