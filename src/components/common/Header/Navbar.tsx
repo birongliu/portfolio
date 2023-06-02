@@ -25,7 +25,7 @@ export default function Navigator() {
 						<span className="relative text-brown-11">{" />"}</span>
 					</h1>
 				</a>
-				<div className={`md:hidden ${!navigate ? "hidden" : ""}`}>
+				<div className={`md:hidden -z-10 ${!navigate ? "hidden" : ""}`}>
 					<nav
 						className={`backdrop-blur dark:backdrop-blur-md bg-white bg-opacity-0 dark:bg-opacity-0 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 dark:bg-slate-900 animate-[menu_7s_ease]`}
 					>
