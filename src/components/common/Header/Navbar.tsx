@@ -27,14 +27,14 @@ export default function Navigator() {
 				</a>
 				<div className={`md:hidden ${!navigate ? "hidden" : ""}`}>
 					<nav
-						className={`backdrop-blur dark:backdrop-blur-md bg-white bg-opacity-0 dark:bg-opacity-0 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 bg-slate-100 dark:bg-slate-900 animate-[menu_7s_ease]`}
+						className={`backdrop-blur dark:backdrop-blur-md bg-white bg-opacity-0 dark:bg-opacity-0 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 dark:bg-slate-900 animate-[menu_7s_ease]`}
 					>
-						<NavLinks setNavigate={setNavigate} />
+						<NavLinks setNavigate={setNavigate} isMobile={true} />
 						<ThemeSwitcher theme={theme} setTheme={setTheme} />
 					</nav>
 				</div>
-				<nav className="hidden md:block space-x-3 relative right-[49px]">
-					<NavLinks setNavigate={setNavigate} />
+				<nav className="hidden md:flex items-center space-x-3 relative right-[48px]">
+  					<NavLinks setNavigate={setNavigate} isMobile={false} />
 				</nav>
 				<div className="hidden md:block">
 					<ThemeSwitcher theme={theme} setTheme={setTheme} />
