@@ -13,8 +13,8 @@ export default function NavLinks({ setNavigate }: { setNavigate: React.Dispatch<
 					className={({ isActive }) =>
 						`${
 							isActive
-								? "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-900 px-2 text-center dark:text-sky-200 text-sky-900"
-								: "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-900 px-2 text-center dark:text-slate-400 text-slate-600"
+								? "font-medium text-lg dark:hover:text-sky-300 hover:text-blue-900 px-2 text-center dark:text-sky-200 text-blue-900"
+								: "font-medium text-lg dark:hover:text-sky-200 hover:text-sky-900 px-2 text-center dark:text-slate-400 text-slate-900"
 						}`
 					}
 				>
