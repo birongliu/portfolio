@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Utils from "../../../utils/Utils";
 import { Theme } from "../../../utils/Types";
 import NavLinks from "./NavLinks";
+import { NavLink } from "react-router-dom";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Navigator() {
@@ -18,13 +19,13 @@ export default function Navigator() {
 	return (
 		<header className="bg-white bg-opacity-0 backdrop-blur dark:backdrop-blur-md sticky top-0 z-10">
 			<div className="flex items-center justify-between max-w-7xl mx-auto md:py-5 py-6 px-12">
-				<a href="/" aria-label="Home">
+					<NavLink to={"/"}>
 					<h1 className="font-bold text-2xl font-hack m-0 text-brand-3 dark:text-white">
 						<span className="relative text-brown-11">{"< "}</span>
 						Bi Rong
 						<span className="relative text-brown-11">{" />"}</span>
 					</h1>
-				</a>
+					</NavLink>
 				<div className={`md:hidden -z-10 ${!navigate ? "hidden" : ""}`}>
 					<nav
 						className={`backdrop-blur dark:backdrop-blur-md bg-white bg-opacity-0 dark:bg-opacity-0 gap-4 my-dark:text-white flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-screen px-8 py-20 dark:bg-slate-900 animate-[menu_7s_ease]`}
