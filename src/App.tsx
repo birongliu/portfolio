@@ -14,6 +14,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 
 export default function App() {
 	return (
+		<Analytics>
 		<QueryClientProvider client={new QueryClient()}> 
 		<div className="dark:bg-gray-900 bg-slate-300 min-h-screen">
 			<Navbar />
@@ -24,12 +25,12 @@ export default function App() {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/project" element={<Project />}/>
 					<Route path="/404" element={<FourOFour />} />
-					<Analytics />
 					<Route path="*" element={<Navigate to="/404" replace />} />
 				</Routes>
 			</main>
 			<Footer />
 		</div>
 		</QueryClientProvider>
+		</Analytics>
 	);
 }
