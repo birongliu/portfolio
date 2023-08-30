@@ -14,8 +14,8 @@ import { QueryClientProvider, QueryClient } from "react-query";
 
 export default function App() {
 	return (
-		<Analytics>
 		<QueryClientProvider client={new QueryClient()}> 
+		<Analytics mode="production"/>
 		<div className="dark:bg-gray-900 bg-slate-300 min-h-screen">
 			<Navbar />
 			<main>
@@ -31,6 +31,5 @@ export default function App() {
 			<Footer />
 		</div>
 		</QueryClientProvider>
-		</Analytics>
 	);
 }
