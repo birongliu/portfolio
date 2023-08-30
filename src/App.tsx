@@ -9,6 +9,7 @@ import {
 	Contact,
 	Project,
 } from "./components";
+import { Analytics } from '@vercel/analytics/react';
 import { QueryClientProvider, QueryClient } from "react-query";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/project" element={<Project />}/>
 					<Route path="/404" element={<FourOFour />} />
+					<Analytics />
 					<Route path="*" element={<Navigate to="/404" replace />} />
 				</Routes>
 			</main>
