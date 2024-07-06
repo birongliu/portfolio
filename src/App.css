@@ -1,6 +1,7 @@
 p {
   display: flex;
-  height: 100vh;
+  height: 500px;
   align-items: center;
+  font-size: 30px;
   justify-content: center;
 }
