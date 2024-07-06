@@ -3,5 +3,6 @@ p {
   height: 500px;
   align-items: center;
   font-size: 30px;
+  text-decoration: underline;
   justify-content: center;
 }
