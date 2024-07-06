@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
-import menu_icon from "../../assets/menu-svgrepo-com.svg";
-import x from "../../assets/close-circle-svgrepo-com.svg";
+import menu_icon from "../../assets/menu-open.svg";
+import x from "../../assets/menu-close.svg";
 import theme_sun from "../../assets/sun.svg"
 import theme_moon from "../../assets/moon.svg"
 
