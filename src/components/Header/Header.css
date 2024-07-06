@@ -1,0 +1,51 @@
+.theme-menu-container {
+  display: flex;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 30px;
+}
+
+.logo-container {
+  margin: 16px 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.nav-container,
+ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-icon,
+.mobile-nav-open,
+.mobile-nav-close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .nav-container,
+  .mobile-nav-close {
+    display: none;
+  }
+
+  .mobile-nav-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--background-color);
+    margin: 0 0 20px 0;
+  }
+}
