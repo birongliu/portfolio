@@ -1,14 +1,18 @@
-import { Fragment } from "react";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from "./components/Header/Header";
-
+import Home from "./components/Home/Home";
+import "./App.css"
 
 function App() {
   return (
-    <Fragment>
+    <div>
       <Header />
-      <p>Under Construction</p>
-    </Fragment>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -1,8 +1,16 @@
-p {
-  display: flex;
-  height: 500px;
-  align-items: center;
-  font-size: 30px;
-  text-decoration: underline;
-  justify-content: center;
+:root {
+  --dark-background-color: #1A1A1A;
+  --dark-text-color: #FAFAFA;
+  --light-text-color:  #1A1A1A;
+  --light-background-color: #e1cbcb;
+}
+
+body {
+  background-color: var(--light-background-color);
+  color: var(--light-text-color)
+}
+
+.theme-dark {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color)
 }
