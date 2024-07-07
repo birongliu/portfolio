@@ -25,7 +25,7 @@ export default function Header() {
         <img className={`menu-icon ${menu ? 'menu-icon-toggled' : ''}`} onClick={() => setMenu((menu) => !menu)} height={30} width={30} src={!menu ? menu_icon : x} alt="Menu" />
       </div>
     </div>
-    <div className={`mobile-nav-open-container ${menu ? 'mobile-nav-toggle' : ""}`}>
+    <div className={`mobile-nav-open-container mobile-nav-toggle-${menu ? 'open' : ""}`}>
     <ul className={`mobile-nav-${menu ? "open" : "close"}`}>
         <li>About</li>
         <li>Project</li>
