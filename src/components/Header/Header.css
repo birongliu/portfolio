@@ -1,3 +1,7 @@
+header {
+    position: sticky;
+    top: 0;
+}
 .theme-menu-container {
   display: flex;
   cursor: pointer;
@@ -33,19 +37,38 @@ ul {
 
 @media screen and (max-width: 768px) {
   .menu-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: block;
   }
+
+  .mobile-nav-open-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility;
+  }
+
+  .mobile-nav-toggle {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .nav-container,
   .mobile-nav-close {
     display: none;
   }
 
-  .mobile-nav-open {
+ .mobile-nav-open {
     display: flex;
+    text-align: center;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: var(--background-color);
-    margin: 0 0 20px 0;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  .menu-icon-toggled {
+    opacity: 1;
+    transform: rotate(90deg);
   }
 }

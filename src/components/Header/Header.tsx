@@ -22,14 +22,16 @@ export default function Header() {
       </ul>
       <div className="theme-menu-container">
         <img className="theme-icon" onClick={() => setTheme((theme) => !theme)} height={30} width={30} src={theme ? theme_sun : theme_moon} alt="theme-icon" />
-        <img className="menu-icon" onClick={() => setMenu((menu) => !menu)} height={30} width={30} src={!menu ? menu_icon : x} alt="Menu" />
+        <img className={`menu-icon ${menu ? 'menu-icon-toggled' : ''}`} onClick={() => setMenu((menu) => !menu)} height={30} width={30} src={!menu ? menu_icon : x} alt="Menu" />
       </div>
     </div>
+    <div className={`mobile-nav-open-container ${menu ? 'mobile-nav-toggle' : ""}`}>
     <ul className={`mobile-nav-${menu ? "open" : "close"}`}>
         <li>About</li>
         <li>Project</li>
         <li>Contact</li>
       </ul>
+    </div>
   </header>
   )
 }
