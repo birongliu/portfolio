@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Header.css";
+import "../../App.css"
 import theme_sun from "../../assets/sun.svg"
 import theme_moon from "../../assets/moon.svg"
 import light_menu_close from "../../assets/light-menu-close.svg"
@@ -15,7 +16,7 @@ export default function Header() {
   const { darkTheme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 25);
+    const handleScroll = () => setIsScrolled(window.scrollY > 15);
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
@@ -24,7 +25,7 @@ export default function Header() {
   }, []);
   
   return (
-  <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+  <header className={`header ${isScrolled ? `header-scrolled-${darkTheme ? "dark" : "light"}` : ''}`}>
     <div className="header-container">
     <div className="logo-container">
         <span className="logo">birong.liu</span>

@@ -1,13 +1,23 @@
 header {
   position: sticky;
   top: 0;
-  background-color: var(--background-color);
+
 }
-.header-scrolled {
-  background-color: transparent; /* Example background color */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Example shadow */
+
+.header-scrolled-light {
+  background-color:#e1cbcb;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Example shadow */
   transition: all 0.3s ease-in-out; /* Smooth transition for the style changes */
+
 }
+
+.header-scrolled-dark {
+  background-color:   #1f1f1f;;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Example shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition for the style changes */
+
+}
+
 
 .theme-menu-container {
   display: flex;
