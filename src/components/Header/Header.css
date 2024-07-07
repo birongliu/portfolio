@@ -1,7 +1,14 @@
 header {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
 }
+.header-scrolled {
+  background-color: #0e0e0e; /* Example background color */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Example shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition for the style changes */
+}
+
 .theme-menu-container {
   display: flex;
   cursor: pointer;
@@ -40,9 +47,6 @@ ul {
     transition: opacity 0.3s ease, transform 0.3s ease;
     display: block;
   }
-  .header {
-    background-color: var(--background-color);
-  }
 
   .mobile-nav-open-container {
     opacity: 0;
@@ -65,6 +69,7 @@ ul {
     display: flex;
     text-align: center;
     flex-direction: column;
+    padding-bottom: 20px;
   }
 
   li {

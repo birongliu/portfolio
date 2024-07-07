@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import menu_icon from "../../assets/menu-open.svg";
 import x from "../../assets/menu-close.svg";
@@ -9,8 +9,25 @@ import theme_moon from "../../assets/moon.svg"
 export default function Header() {
   const [theme, setTheme] = useState(true);
   const [menu, setMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 25) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-  <header className="header">
+  <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
     <div className="header-container">
     <div className="logo-container">
         <span className="logo">birong.liu</span>
