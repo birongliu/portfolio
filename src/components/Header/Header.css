@@ -44,7 +44,7 @@ ul {
   .mobile-nav-open-container {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility;
+    transition: opacity 0.5s ease-in, visibility;
   }
 
   .mobile-nav-toggle {
