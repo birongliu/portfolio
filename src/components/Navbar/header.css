@@ -1,0 +1,25 @@
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgb(5, 7, 20);
+}
+.container {
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-container > ul {
+    display: flex;
+    gap: 0.625rem;
+    padding: 0 1rem;
+    list-style: none;
+}

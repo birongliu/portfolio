@@ -1,3 +1,8 @@
-.hello {
+.main {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
 }

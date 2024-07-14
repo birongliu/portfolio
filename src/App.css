@@ -1,11 +1,9 @@
 :root {
-  --dark-background-color: #1A1A1A;
+  --dark-background-color: rgb(5, 7, 20);
   --dark-text-color: #FAFAFA;
-  --light-text-color:  #1A1A1A;
-  --light-background-color: #e1cbcb;
 }
 
-body {
+.theme-light {
   background-color: var(--light-background-color);
   color: var(--light-text-color)
 }
