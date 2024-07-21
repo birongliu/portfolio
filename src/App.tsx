@@ -2,8 +2,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Project from "./components/Project";
-import FloatingNav, { navItems } from "./components/ui/FloatingNav";
+import FloatingNav from "./components/ui/FloatingNav";
 import "./global.css";
+import { navItems } from "./lib/constants";
 
 function App() {
   return (
