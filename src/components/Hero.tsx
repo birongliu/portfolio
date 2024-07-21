@@ -18,7 +18,7 @@ export default function Hero() {
           Full Stack Developer | Based in NYC
         </p>
       </div>
-      <div className="relative h-11 -bottom-60"> 
+      <div className="relative h-11 -bottom-56"> 
       <AnimatePresence mode="wait">
         <motion.a
           initial={{ opacity: 0, y: -1000 }}
