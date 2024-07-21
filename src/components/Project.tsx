@@ -1,5 +1,5 @@
-import React from 'react'
-import GridCard, { data } from './ui/GridCard'
+import { data } from '../lib/constants'
+import GridCard from './ui/GridCard'
 
 export default function Project() {
   return (
@@ -7,7 +7,7 @@ export default function Project() {
     <div className="text-white-100 font-bold text-5xl flex justify-center">
       Project
     </div>
-    <GridCard items={[data]} />
+    <GridCard items={data} />
   </section>
   )
 }
