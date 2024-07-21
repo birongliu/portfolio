@@ -1,4 +1,4 @@
-import { GridItem } from "./types";
+import { GridItem, NavItemProps } from "./types";
 
 export const data: GridItem[] = [{
     photo: "./projects/empowerED.png",
@@ -28,3 +28,19 @@ export const data: GridItem[] = [{
       src: "./icons/github.png"
     }],
   }];
+
+  export const navItems: NavItemProps[] = [
+    {
+      name: "About",
+      link: "#about",
+    },
+    {
+      name: "Project",
+      link: "#project",
+    },
+    {
+      name: "Contact",
+      link: "#contact",
+    },
+  ];
+  

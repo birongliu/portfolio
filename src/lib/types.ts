@@ -17,3 +17,16 @@ export interface GridItem {
   tech: TechStack[];
   action: ProjectAction[];
 }
+
+
+
+export interface NavItemProps {
+  name: string;
+  link: string;
+  icon?: string;
+}
+
+export interface FloatingNavProps {
+  navItems: NavItemProps[];
+  className?: string;
+}

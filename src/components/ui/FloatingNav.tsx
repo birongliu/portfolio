@@ -1,4 +1,4 @@
-import React, { useEffect, useState, } from "react";
+import { useState } from "react";
 import {
   motion,
   useMotionValueEvent,
@@ -6,32 +6,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { cn } from "../../lib/util";
-
-interface NavItemProps {
-  name: string;
-  link: string;
-  icon?: string;
-}
-
-interface FloatingNavProps {
-  navItems: NavItemProps[];
-  className?: string;
-}
-
-export const navItems: NavItemProps[] = [
-  {
-    name: "About",
-    link: "#about",
-  },
-  {
-    name: "Project",
-    link: "#project",
-  },
-  {
-    name: "Contact",
-    link: "#contact",
-  },
-];
+import { FloatingNavProps } from "../../lib/types";
 
 export default function FloatingNav(options: FloatingNavProps) {
   const { scrollYProgress } = useScroll();
@@ -39,6 +14,7 @@ export default function FloatingNav(options: FloatingNavProps) {
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
+    console.log(window.location)
     const THRESHOLD = 0.05;
     const previousY = scrollYProgress.getPrevious();
     if (typeof current !== "number" || !previousY) return;
@@ -56,7 +32,7 @@ export default function FloatingNav(options: FloatingNavProps) {
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
         className="flex max-w-fit fixed top-10 dark:bg-primary z-10 bg-white inset-x-0 mx-auto border border-cyan-900 rounded-xl shadow-xl px-5 py-3 items-center justify-center space-x-4"
       >
-        <a href="#home" className="flex justify-center" onClick={() => setActive("")}>
+        <a href="#home" className="flex justify-center" onClick={() => setActive("#home")}>
           <span className="text-base border rounded-[50%] px-2 dark:text-white  border-cyan-900 text-blue-600 hover:text-blue-500 cursor-pointer">
             B
           </span>
