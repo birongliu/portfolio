@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function About() {
+export default function Contact() {
   return (
-    <section id="about" className="h-screen py-20">
+    <section id="contact" className="py-20 h-screen">
       <div className="text-white-100 font-bold text-5xl flex justify-center">
-        About
+        Contact
       </div>
     </section>
   );

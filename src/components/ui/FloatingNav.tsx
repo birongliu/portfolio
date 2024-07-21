@@ -29,7 +29,7 @@ export const navItems: NavItemProps[] = [
   },
   {
     name: "Contact",
-    link: "#Contact",
+    link: "#contact",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function FloatingNav(options: FloatingNavProps) {
         initial={{ opacity: 1, y: -100 }}
         transition={{ duration: 0.2 }}
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
-        className="flex max-w-fit fixed top-10 dark:bg-primary bg-white inset-x-0 mx-auto border border-cyan-900 rounded-xl shadow-xl px-5 py-3 items-center justify-center space-x-4"
+        className="flex max-w-fit fixed top-10 dark:bg-primary z-10 bg-white inset-x-0 mx-auto border border-cyan-900 rounded-xl shadow-xl px-5 py-3 items-center justify-center space-x-4"
       >
         <a href="#home" className="flex justify-center" onClick={() => setActive("")}>
           <span className="text-base border rounded-[50%] px-2 dark:text-white  border-cyan-900 text-blue-600 hover:text-blue-500 cursor-pointer">

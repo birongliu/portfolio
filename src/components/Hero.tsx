@@ -2,7 +2,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { AnimatePresence, motion } from "framer-motion";
 export default function Hero() {
   return (
-    <main id="home" className="flex justify-center items-center h-screen">
+    <main id="home" className="flex flex-col justify-center items-center h-screen">
       <Spotlight
         fill="white"
         className="h-screen -top-20 -left-10 md:-left-32 md:-top-20"
@@ -18,19 +18,20 @@ export default function Hero() {
           Full Stack Developer | Based in NYC
         </p>
       </div>
+      <div className="relative h-11 -bottom-60"> 
       <AnimatePresence mode="wait">
         <motion.a
           initial={{ opacity: 0, y: -1000 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           href="#about"
-          className="hover:fill-cyan-300 hover:border-cyan-600 cursor-pointer rounded-[50%] border-cyan-900 border-2 p-2 fill-cyan-900 top-[45%] hidden lg:absolute lg:block"
+          className=" hover:fill-cyan-300 hover:border-cyan-600 cursor-pointer rounded-xl border-cyan-900 border-2 p-2 fill-cyan-900 hidden lg:block"
         >
           <motion.svg
             height="25px"
             width="25px"
             initial={{ y: 0 }}
-            animate={{ y: [0, 2, 0] }}
+            animate={{ y: [0, 3, 0] }}
             transition={{
               repeatType: "loop",
               repeat: Infinity,
@@ -53,6 +54,7 @@ export default function Hero() {
           </motion.svg>
         </motion.a>
       </AnimatePresence>
+      </div>
     </main>
   );
 }
