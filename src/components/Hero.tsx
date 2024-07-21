@@ -18,7 +18,7 @@ export default function Hero() {
           Full Stack Developer | Based in NYC
         </p>
       </div>
-      <div className="top-[45%] md:absolute">
+      <div className="top-[45%] hidden md:absolute md:block">
         <svg
           fill="white"
           height="25px"
