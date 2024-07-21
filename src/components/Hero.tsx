@@ -8,7 +8,8 @@ export default function Hero() {
         className="h-screen -top-20 -left-10 md:-left-32 md:-top-20"
       />
       <div className="flex justify-center flex-col cursor-default">
-        <div className="uppercase tracking-widest text-small text-left text-blue-100 max-w-80">
+        <div 
+          className="uppercase tracking-widest text-small text-left text-blue-100 max-w-80">
           👋 Hello, I'm
         </div>
         <div className="text-blue-400 text-6xl font-bold text-center uppercase">
@@ -23,6 +24,7 @@ export default function Hero() {
         <motion.a
           initial={{ opacity: 0, y: -1000 }}
           animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.2 }}
           exit={{ opacity: 0 }}
           href="#about"
           className=" hover:fill-cyan-300 hover:border-cyan-600 cursor-pointer rounded-xl border-cyan-900 border-2 p-2 fill-cyan-900 hidden lg:block"

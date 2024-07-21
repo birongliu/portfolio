@@ -1,6 +1,3 @@
-import React from "react";
-
-
 export const data: GridItem = {
   photo: "./projects/empowerED.png",
   category: "web dev",
@@ -23,7 +20,11 @@ export const data: GridItem = {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
     },
   ],
-  action: [""],
+  action: [{
+    name: "github",
+    url: "https://github.com/pranitha05/EmpowerED",
+    src: "./icons/github.png"
+  }],
 };
 
 interface TechStack {
@@ -36,7 +37,7 @@ interface GridItem {
   title: string;
   description: string;
   tech: TechStack[]; // images
-  action: string[]; //github and website
+  action: { name: "github" | "website"; url: string, src: string }[]; //github and website
 }
 
 export default function Grid({ items }: { items: GridItem[] }) {
@@ -50,20 +51,29 @@ export default function Grid({ items }: { items: GridItem[] }) {
             <h1 className="text-white-100 font-bold text-2xl">{item.title}</h1>
             <p className="text-white-100 text-base mb-4">{item.description}</p>
             <div className="flex justify-between">
-            <div className="flex gap-2">
-              {item.tech.map((stack) => (
-                <img
-                  src={stack.image}
-                  alt={stack.name}
-                  height={25}
-                  width={25}
-                />
-              ))}
+              <div className="flex gap-2">
+                {item.tech.map((stack) => (
+                  <img
+                    src={stack.image}
+                    alt={stack.name}
+                    height={25}
+                    width={25}
+                  />
+                ))}
+              </div>
+              <div>
+                {item.action.map((action) => (
+                  <a href={action.url}>
+                    <img
+                      src={action.src}
+                      width={25}
+                      height={25}
+                      alt={action.name}
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
-            <div>
-                <img src="./icons/github.svg" width={25} height={25} alt="github"></img>
-            </div>
-          </div>
           </div>
         </div>
       ))}
