@@ -26,6 +26,11 @@ export const data: GridItem[] = [{
       name: "github",
       url: "https://github.com/pranitha05/EmpowerED",
       src: "./icons/github.png"
+    },
+    {
+      name: "website",
+      url: "https://google.com",
+      src: './icons/globe.svg'
     }],
   }];
 
