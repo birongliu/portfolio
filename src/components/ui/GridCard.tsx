@@ -4,7 +4,7 @@ export default function Grid({ items }: { items: GridItem[] }) {
   return (
     <div className="grid py-10 grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
-        <div className="text-white bg-black-300 hover:bg-black-200 rounded p-5">
+        <div className="text-white bg-slate-950 hover:bg-slate-800 rounded-xl p-5">
           <img src={item.photo} className="rounded w-full" alt={item.title} />
           <div className="p-2">
             <h1 className="text-white-100 font-bold text-2xl">{item.title}</h1>
