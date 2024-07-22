@@ -7,7 +7,7 @@ export default function Contact() {
       className="rounded-xl py-10 mt-20 bg-slate-800 "
     >
       <div className="p-14 ">
-        <div className="p-10 bg-black-200 rounded">
+        <div className="p-10 bg-black-200 rounded px-10">
           <h1 className="text-white-100 font-bold text-3xl pb-4">Contact Me</h1>
           <hr className="py-1 w-20 bg-white-100" />
           <p className="text-white-100 py-5">

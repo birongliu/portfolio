@@ -32,7 +32,8 @@ export const data: GridItem[] = [{
       url: "https://google.com",
       src: './icons/globe.svg'
     }],
-  }];
+  },
+  ];
 
   export const navItems: NavItemProps[] = [
     {
