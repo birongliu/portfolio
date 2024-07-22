@@ -6,7 +6,7 @@ export default function Grid({ items }: { items: GridItem[] }) {
       <AnimatePresence mode="wait"> 
       {items.map((item) => (
         <motion.div whileHover={{ scale: 1.02 }} className="text-white bg-slate-800 hover:bg-slate-700 rounded-xl p-5">
-          <img src={item.photo} className="rounded w-full" alt={item.title} />
+          <img src={item.photo} className="rounded" alt={item.title} />
           <div className="p-2">
             <h1 className="text-white-100 font-bold text-2xl">{item.title}</h1>
             <p className="text-white-100 text-base mb-4 text-wrap">{item.description}</p>
