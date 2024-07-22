@@ -12,7 +12,7 @@ export default function Hero() {
           className="uppercase tracking-widest text-small text-left text-blue-100 max-w-80">
           👋 Hello, I'm
         </div>
-        <div className="text-blue-400 text-6xl font-bold text-center uppercase">
+        <div className="text-blue-400 text-5xl md:text-6xl font-bold text-center uppercase">
           Bi Rong Liu
         </div>
         <p className="text-blue-200 text-right">
