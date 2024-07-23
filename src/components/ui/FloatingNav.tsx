@@ -14,7 +14,6 @@ export default function FloatingNav(options: FloatingNavProps) {
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    console.log(window.location)
     const THRESHOLD = 0.05;
     const previousY = scrollYProgress.getPrevious();
     if (typeof current !== "number" || !previousY) return;
