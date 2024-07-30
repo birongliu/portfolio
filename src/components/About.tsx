@@ -23,7 +23,7 @@ export default function About() {
             aria-label="resume"
             download="birongliu-resume.pdf"
           >
-            <button className="border bg-primary border-cyan-900 p-2 rounded-xl hover:cursor-pointer hover:bg-cyan-800 text-white-200">
+            <button className="border bg-primary border-cyan-900 p-2 rounded hover:cursor-pointer hover:bg-cyan-950 text-white-200">
               Download Resume
             </button>
           </a>
