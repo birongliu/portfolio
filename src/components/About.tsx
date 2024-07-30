@@ -53,7 +53,7 @@ export default function About() {
         </div>
         <img
           src="https://assets.about.me/background/users/b/i/r/birongliu_1598379907_157.jpg"
-          className="w-full object-cover rounded"
+          className="w-full h-96 object-cover object-top rounded"
           alt="birong-picture"
         />
       </div>
