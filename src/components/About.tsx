@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { techStack } from "../lib/constants";
 export default function About() {
@@ -18,13 +19,16 @@ export default function About() {
             <hr className="py-2 w-20 bg-white-100 border-none rounded-sm" />
             <h2 className="font-bold text-2xl text-blue-200 uppercase">Technology</h2>
           </div>
-          <div className="border-cyan-900 bg-white-100 border bg-primary h-10 rounded w-full">
+          <AnimatePresence mode="wait">
+          <motion.div whileHover={{ height: "8rem" }} className="border-cyan-900 bg-white-100 border bg-primary h-10 rounded w-full">
             <ul className="flex gap-1 py-2 px-2">
               {techStack.map(stack => (
                 <li><img src={stack.image} alt={stack.name} width={25} height={25} /></li>
               ))}
             </ul>
-          </div>
+
+          </motion.div>
+          </AnimatePresence>
         </div>
         <img
           src="/projects/empowerED.png"
