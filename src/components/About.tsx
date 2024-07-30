@@ -20,7 +20,7 @@ export default function About() {
             <h2 className="font-bold text-2xl text-blue-200 uppercase">Technology</h2>
           </div>
           <AnimatePresence mode="wait">
-          <motion.div whileHover={{ height: "8rem" }} className="border-cyan-900 bg-white-100 border bg-primary h-10 rounded w-full">
+          <motion.div whileHover={{ height: "8rem" }} className="border-cyan-900 border bg-primary h-10 rounded w-full">
             <ul className="flex gap-1 py-2 px-2">
               {techStack.map(stack => (
                 <li><img src={stack.image} alt={stack.name} width={25} height={25} /></li>
