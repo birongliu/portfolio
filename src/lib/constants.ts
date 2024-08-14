@@ -4,6 +4,7 @@ export const data: GridItem[] = [
   {
     photo: "./projects/empowerED.png",
     category: "web development",
+    category: "Web development",
     title: "EmpowerED",
     description: `Built an interactive education website to enhance personalized learning through gamified activities for underrepresented students`,
     tech: [
@@ -65,6 +66,34 @@ export const data: GridItem[] = [
       image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", // Assuming this is the correct URL for Clerk's logo
     }]
   },
+=======
+    title: "Pantry Tracker",
+    category: "Web development",
+    description: "Pantry Tracker is a web app that helps you manage your food inventory and snacks efficiently. Easily monitor the quantity, category, and status of your pantry items to ensure you never run out of your favorite foods.",
+    photo: "./projects/pantry-tracker.png",
+    action: [{
+      name: "website",
+      url: "https://pantry-tracker-neon.vercel.app",
+      src: "./icons/globe.svg",
+    },
+    {
+      name: "github",
+      url: "https://github.com/birongliu/pantry-tracker",
+      src: "./icons/github.png",
+    }],
+    tech: [{
+      name: "TS",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      name: "NextJS",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+    },  
+    {
+      name: "tailwindcss",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+    }]
+  }
 ];
 
 export const techStack: TechStack[] = [
