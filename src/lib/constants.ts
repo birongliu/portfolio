@@ -5,7 +5,7 @@ export const data: GridItem[] = [
     photo: "./projects/empowerED.png",
     category: "web development",
     title: "EmpowerED",
-    description: `Built an interactive education website to enhance personalized learning through gamified activities for underrepresented students`,
+    description: `An interactive education website to enhance personalized learning through gamified activities for underrepresented students`,
     tech: [
       {
         name: "HTML",
@@ -40,7 +40,7 @@ export const data: GridItem[] = [
     title: "Pantry Tracker",
     category: "web development",
     description:
-      "Pantry Tracker is a web app that helps you manage your food inventory and snacks efficiently. Easily monitor the quantity, category, and status of your pantry items to ensure you never run out of your favorite foods.",
+      "A web app that helps you manage your food inventory and snacks efficiently. Easily monitor the quantity, category, and status of your pantry items to ensure you never run out of your favorite foods.",
     photo: "./projects/pantry-tracker.png",
     action: [
       {
