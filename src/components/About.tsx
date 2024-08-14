@@ -33,31 +33,25 @@ export default function About() {
               Technology
             </h2>
           </div>
-          <div className="border-cyan-900 border bg-primary h-fit rounded w-fit">
-            <ul className="flex gap-1 py-2 px-2 items-center">
-              {techStack.map((stack) => (
-                <>
-                  <span className="text-base flex border h-5 rounded-xl first:hidden last:hidden border-cyan-900" />
-                  <div>
-                    <li>
-                      <img
-                        src={stack.image}
-                        alt={stack.name}
-                        width={30}
-                        height={30}
-                      />
-                    </li>
-                  </div>
-                </>
-              ))}
-            </ul>
-          </div>
+          <ul className="h-full mb-20 grid-cols-2 mt-2 md:grid-cols-3 lg:hidden rounded grid">
+             {techStack.map(stack => (
+              <li key={stack.name} className="h-full hover:bg-black-100 flex justify-center items-center flex-col">
+                <img height={50} width={50} className="object-contain" src={stack.image} alt={stack.name} />
+              </li>
+             ))}
+          </ul>
         </div>
-        <img
-          src="https://assets.about.me/background/users/b/i/r/birongliu_1598379907_157.jpg"
-          className="w-full h-96 object-cover object-top rounded"
-          alt="birong-picture"
-        />
+        <div className="relative mb-10">
+          <div className="bg-white-100 rounded w-10 h-5 absolute z-0 -left-5 -top-2"></div>
+          <div className="bg-white-100 rounded w-10 h-5 absolute z-0 -right-5 -top-2"></div>
+          <img
+            src="https://assets.about.me/background/users/b/i/r/birongliu_1598379907_157.jpg"
+            className="w-full h-96 object-cover object-top rounded z-10 relative shadow-lg border-4 border-white-200"
+            alt="birong-picture"
+          />
+          <div className="bg-white-100 rounded w-10 h-5 absolute z-0 -right-5 -bottom-2"></div>
+          <div className="bg-white-100 rounded w-10 h-5 absolute z-0 -left-5 -bottom-2"></div>
+        </div>
       </div>
     </section>
   );

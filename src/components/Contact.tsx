@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="rounded-xl py-10 mt-10 h-full bg-slate-800"
+      className="rounded-xl py-10 mt-40 mb-10 bg-slate-800"
     >
       <div className="p-5 md:px-10">
         <div className="p-10 bg-black-200 rounded px-10">

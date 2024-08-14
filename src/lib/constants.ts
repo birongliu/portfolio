@@ -78,34 +78,7 @@ export const data: GridItem[] = [
   },
 ];
 
-export const techStack: TechStack[] = [
-  {
-    name: "HTML",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-  },
-  {
-    name: "JS",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "CSS",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-  },
-  {
-    name: "NodeJS",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png?20170401104355",
-  },
-  {
-    name: "MongoDB",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
-  },
-];
-
+export const techStack: TechStack[] = data.flatMap(k => k.tech.map(tech => ({ name: tech.name, image: tech.image })));
 export const navItems: NavItemProps[] = [
   {
     name: "About",
