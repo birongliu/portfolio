@@ -11,6 +11,7 @@ export interface ProjectAction {
 
 export interface GridItem {
   photo: string;
+  category: "web development" | "mobile development";
   category: "Web development" | "mobile development";
   title: string;
   description: string;
