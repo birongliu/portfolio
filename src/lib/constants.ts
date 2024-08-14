@@ -37,42 +37,6 @@ export const data: GridItem[] = [
     ],
   },
   {
-    category: "web development",
-    action: [
-      {
-        name: "github",
-        url: "https://github.com/birongliu/pantry-tracker",
-        src: "./icons/github.png",
-      },
-      {
-        name: "website",
-        url: "https://pantry-tracker-neon.vercel.app",
-        src: "./icons/globe.svg",
-      },
-    ],
-    photo: "./projects/pantry-tracker.png",
-    title: "Pantry Tracker + AI",
-    description:
-      "Pantry Tracker is a web app that helps you manage your food inventory and snacks efficiently. Easily monitor the quantity, category, and status of your pantry items to ensure you never run out of your favorite foods.",
-    tech: [
-      {
-        name: "Next.js",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-      },
-      {
-        name: "Firebase",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
-      },
-      {
-        name: "Tailwindcss",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", // Assuming this is the correct URL for Clerk's logo
-      },
-    ],
-  },
-  {
     title: "Pantry Tracker",
     category: "web development",
     description:
