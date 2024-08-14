@@ -66,6 +66,10 @@ export const data: GridItem[] = [
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
       },
       {
+        name: "Firebase",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
+      }
+      {
         name: "tailwindcss",
         image:
           "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
