@@ -11,7 +11,7 @@ export interface ProjectAction {
 
 export interface GridItem {
   photo: string;
-  category: string;
+  category: "Web development" | "mobile development";
   title: string;
   description: string;
   tech: TechStack[];

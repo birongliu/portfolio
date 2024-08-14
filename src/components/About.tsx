@@ -15,8 +15,8 @@ export default function About() {
             I am passionate about creating Web Apps with UI/UX User Interface, I
             specialize in a wide range of programming languages and
             technologies. My experience includes developing full-stack web
-            applications, where I've honed my skills in using React,
-            Express, and PostgreSQL, among others.
+            applications, where I've honed my skills in using React, Express,
+            and PostgreSQL, among others.
           </p>
           <a
             href="/birongliu-resume.pdf"
@@ -38,14 +38,16 @@ export default function About() {
               {techStack.map((stack) => (
                 <>
                   <span className="text-base flex border h-5 rounded-xl first:hidden last:hidden border-cyan-900" />
-                  <li>
-                    <img
-                      src={stack.image}
-                      alt={stack.name}
-                      width={25}
-                      height={25}
-                    />
-                  </li>
+                  <div>
+                    <li>
+                      <img
+                        src={stack.image}
+                        alt={stack.name}
+                        width={30}
+                        height={30}
+                      />
+                    </li>
+                  </div>
                 </>
               ))}
             </ul>
