@@ -2,7 +2,7 @@ import React from "react";
 import { techStack } from "../lib/constants";
 export default function About() {
   return (
-    <section id="about" className="py-48 px-5">
+    <section id="about" className="pt-48 px-5">
       <div className="grid lg:grid-cols-2 gap-x-10 text-gray-50">
         <div className="lg:order-none">
         <div className="relative mt-4 mb-10">
@@ -43,21 +43,21 @@ export default function About() {
             href="#contact"
             aria-label="contact"          >
             <button className="border bg-primary border-cyan-900 p-2 rounded-md hover:cursor-pointer hover:bg-cyan-800 text-white-200">
-              Contact ME
+              Contact Me
             </button>
           </a>
           </div>
         </div>
-        <div className="flex gap-2 flex-col md:mt-0 mt-10 ">
+        <div className="flex gap-2 flex-col md:mt-0 mt-5">
           <div className="flex gap-1 items-center lg:mt-0 mt-10">
-            <hr className="py-2 w-20 h-4 bg-white-100 border-none rounded" />
+            <hr className="py-2 w-20 h-5 bg-white-100 border-none rounded" />
             <h2 className="font-bold text-2xl text-blue-200 uppercase">
               Technology
             </h2>
             </div>
             <ul className="h-full mb-20 grid-cols-2 mt-2 md:grid-cols-3  rounded grid">
              {techStack.map(stack => (
-              <li key={stack.name} className="h-full p-10 hover:bg-black-100 flex justify-center items-center flex-col">
+              <li key={stack.name} className="p-10 hover:bg-black-100 flex justify-center items-center flex-col">
                 <img height={50} width={50} className="object-contain" src={stack.image} alt={stack.name} />
               </li>
              ))}
