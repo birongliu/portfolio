@@ -44,14 +44,14 @@ export const data: GridItem[] = [
     photo: "./projects/pantry-tracker.png",
     action: [
       {
-        name: "website",
-        url: "https://pantry-tracker-neon.vercel.app",
-        src: "./icons/globe.svg",
-      },
-      {
         name: "github",
         url: "https://github.com/birongliu/pantry-tracker",
         src: "./icons/github.png",
+      },
+      {
+        name: "website",
+        url: "https://pantry-tracker-neon.vercel.app",
+        src: "./icons/globe.svg",
       },
     ],
     tech: [
