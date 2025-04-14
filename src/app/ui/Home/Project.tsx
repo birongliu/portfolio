@@ -97,7 +97,7 @@ export default function Project() {
           <div>
             <h1 className="font-bold text-lg">PetPals</h1>
             <time className="text-sm text-foreground/80">
-              Auguest 2024 - December 2024
+              August 2024 - December 2024
             </time>
             <p className="text-base dark:text-slate-400">
               Web application that allows users to discover the joy of pet
