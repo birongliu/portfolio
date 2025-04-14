@@ -44,7 +44,7 @@ const projects: ProjectDetails[] = [
     description:
       "Web application that allows users to discover the joy of pet adoption alongside a supportive community of animal lovers and those who are new to pet owning.",
     techStack: "React, Flask, OpenAI Whisper & Vision",
-    time: "August 2025 - December 2025",
+    time: "August 2024 - December 2024",
   },
 ];
 
