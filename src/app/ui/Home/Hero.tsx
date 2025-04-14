@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <section className="mx-auto px-8 md:px-12 lg:hidden mt-20 max-w-7xl">
+    <section className="mx-auto px-8 md:px-12  mt-20 max-w-7xl">
       <div className="flex flex-col">
         <h1 className="font-bold text-4xl uppercase dark:text-slate-300 tracking-tight">
           birong.liu
