@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Hero() {
   return (
