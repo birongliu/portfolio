@@ -70,7 +70,7 @@ export default function Project() {
           <div>
             <h1 className="font-bold text-lg">Signlingo (Hackathon Win)</h1>
             <time className="text-sm text-foreground/80">
-              October 2024 - October 2024``
+              October 2024 - October 2024
             </time>
             <p className="text-base dark:text-slate-400">
               Built a web app at HackRU to teach American Sign Language using
@@ -97,7 +97,7 @@ export default function Project() {
           <div>
             <h1 className="font-bold text-lg">PetPals</h1>
             <time className="text-sm text-foreground/80">
-              Auguest 2024 - December 2024``
+              Auguest 2024 - December 2024
             </time>
             <p className="text-base dark:text-slate-400">
               Web application that allows users to discover the joy of pet
