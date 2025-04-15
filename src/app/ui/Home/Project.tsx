@@ -36,14 +36,14 @@ const projects: ProjectDetails[] = [
     image: signlingo.src,
     description:
       "Built an ASL learning app at HackRU with bite-sized lessons and real-time gesture recognition using machine learning.",
-    techStack: "React, Flask, OpenAI Whisper & Vision",
+    techStack: "cloudflare, flask, nextjs, python, supabase, tailwindcss, websocket",
     time: "October 2024 - October 2024",
   },
   {
     name: "PetPals",
     image: petpals.src,
     description: 'Web app that helps users explore pet adoption and connect with a supportive community of animal lovers.',
-    techStack: "React, Flask, OpenAI Whisper & Vision",
+    techStack: "nextjs, tailwindcss, expressjs, mongodb, google gemini, websocket",
     time: "August 2024 - December 2024",
   },
 ];
