@@ -8,13 +8,14 @@ export default function About() {
       </h1>
 
       <p className="py-3 dark:text-slate-400 leading-normal">
-        I&apos;m Bi Rong Liu, a senior Computer Science student at Brooklyn College
-        and 3x hackathon winner specializing in full-stack development with
-        Next.js, React, and Flask. As Tech Lead of the Computer Science Club and GenAI
-        ambassador, I’ve led projects that improve access and usability—like a
-        Retrieval-Augmented chatbot that streamlined student resource discovery
-        for 1,000+ computer science students, and NutriVoice, an award-winning voice-powered
-        nutrition tracker for the visually impaired built at columbia university hackathon.
+        Bi Rong Liu is a senior Computer Science student at Brooklyn College and
+        a three-time hackathon winner, specializing in full-stack development
+        with Next.js, React, and Flask. As Tech Lead of the Computer Science
+        Club and a GenAI ambassador, Bi Rong has led impactful projects that
+        enhance access and usability—such as a Retrieval-Augmented chatbot that
+        streamlined resource discovery for over 1,000 computer science students,
+        and NutriVoice, an award-winning voice-powered nutrition tracker for the
+        visually impaired developed at the Columbia University Hackathon.
       </p>
     </section>
   );
