@@ -66,7 +66,7 @@ export default function Project() {
           >
             <Image
               src={project.image}
-              className="rounded md:w-fit object-cover w-full hover:outline-2 hover:outline-foreground/90"
+              className="rounded w-full md:w-fit object-cover over:outline-2 hover:outline-foreground/90"
               width={200}
               height={30}
               alt={project.name}
