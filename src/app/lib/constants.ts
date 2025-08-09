@@ -38,4 +38,13 @@ export const projects: ProjectDetails[] = [
       "nextjs, tailwindcss, expressjs, mongodb, google gemini, websocket",
     time: "August 2024 - December 2024",
   },
+  {
+    name: "PetPals",
+    image: petpals.src,
+    description:
+      "Web app that helps users explore pet adoption and connect with a supportive community of animal lovers.",
+    techStack:
+      "nextjs, tailwindcss, expressjs, mongodb, google gemini, websocket",
+    time: "August 2024 - December 2024",
+  },
 ];

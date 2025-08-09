@@ -1,13 +1,23 @@
+import Image from 'next/image';
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <section className="mx-auto px-8 md:px-12  mt-20 max-w-7xl">
+    <section className="mx-auto px-8 md:px-12 mt-20 max-w-7xl">
       <div className="flex flex-col">
-        <h1 className="font-bold text-4xl uppercase dark:text-slate-300 tracking-tight">
-          birong.liu
-        </h1>
+        <div className='flex-row flex items-center space-x-1'>
+          <Image
+            className="bg-white rounded-full w-9"
+            width={30}
+            height={30}
+            alt="birongliu profile picture via github"
+            src="https://avatars.githubusercontent.com/u/62890027?v=4"
+          />
+          <h1 className="font-bold text-3xl uppercase dark:text-slate-300 tracking-tight">
+            birong.liu
+          </h1>
+        </div>
         <h2 className="mt-2 font-bold tracking-tight dark:text-slate-400/90 text-lg">
           Full Stack Developer
         </h2>
