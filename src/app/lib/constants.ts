@@ -2,6 +2,7 @@ import image from "@/app/images/projects/nutrivoice.png";
 import spendly from "@/app/images/projects/spendly.png";
 import signlingo from "@/app/images/projects/signlingo.png";
 import petpals from "@/app/images/projects/petpals.png";
+import { ProjectDetails } from "./Types";
 
 export const projects: ProjectDetails[] = [
   {
