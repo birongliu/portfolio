@@ -9,9 +9,9 @@ export default function Hero() {
       <div className="flex flex-col">
         <div className="flex-row flex items-center space-x-1">
           <Image
-            className="bg-white rounded-full w-9"
-            width={30}
-            height={30}
+            className="border border-dotted border-slate-400 rounded-full"
+            width={36}
+            height={36}
             alt="birongliu profile picture via github"
             src="https://avatars.githubusercontent.com/u/62890027?v=4"
           />
