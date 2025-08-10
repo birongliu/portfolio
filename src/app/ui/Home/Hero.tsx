@@ -1,12 +1,13 @@
-import Image from 'next/image';
-import React from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section className="mx-auto px-8 md:px-12 mt-20 max-w-7xl">
       <div className="flex flex-col">
-        <div className='flex-row flex items-center space-x-1'>
+        <div className="flex-row flex items-center space-x-1">
           <Image
             className="bg-white rounded-full w-9"
             width={30}
@@ -28,27 +29,114 @@ export default function Hero() {
       </div>
       <ul className="flex pt-6 gap-4 text-3xl">
         <li>
-          <a
+          <Link
             href="https://github.com/birongliu"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
           >
             <FaGithub />
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
             href="https://linkedin.com/in/birongliu"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
           >
             <FaLinkedin />
-          </a>
+          </Link>
         </li>
         <li>
-          <a
+          <Link
+            href="/Bi_Rong_Liu_Resume.pdf"
+            target="_blank"
+            download={true}
+            className="hover:text-white"
+          >
+            <svg
+              height="30"
+              width="30"
+              viewBox="0 0 100 120"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="10"
+                y="10"
+                width="80"
+                height="100"
+                rx="6"
+                ry="6"
+                stroke="#333"
+                strokeWidth="2"
+              />
+              <polygon
+                points="70,10 90,10 90,30"
+                fill="currentColor"
+                stroke="#333"
+                strokeWidth="2"
+              />
+              <line
+                x1="70"
+                y1="10"
+                x2="90"
+                y2="30"
+                stroke="#333"
+                strokeWidth="2"
+              />
+              <circle cx="35" cy="40" r="12" fill="#555" />
+              <rect
+                x="55"
+                y="30"
+                width="25"
+                height="6"
+                fill="#555"
+                rx="1"
+                ry="1"
+              />
+              <rect
+                x="55"
+                y="45"
+                width="30"
+                height="6"
+                fill="#555"
+                rx="1"
+                ry="1"
+              />
+              <rect
+                x="20"
+                y="65"
+                width="60"
+                height="6"
+                fill="#555"
+                rx="1"
+                ry="1"
+              />
+              <rect
+                x="20"
+                y="80"
+                width="50"
+                height="6"
+                fill="#555"
+                rx="1"
+                ry="1"
+              />
+              <rect
+                x="20"
+                y="95"
+                width="55"
+                height="6"
+                fill="#555"
+                rx="1"
+                ry="1"
+              />
+            </svg>
+          </Link>
+        </li>
+        <li>
+          <Link
             href="https://devpost.com/birongliu"
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +157,7 @@ export default function Hero() {
                 strokeWidth="1"
               ></path>
             </svg>
-          </a>
+          </Link>
         </li>
       </ul>
     </section>
