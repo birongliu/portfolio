@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import { projects } from "@/app/lib/constants";
+import Link from "next/link";
 
 export default function Project() {
   return (
@@ -14,7 +15,7 @@ export default function Project() {
         {projects.map((project, index) => (
           <li
             key={index}
-            className="flex flex-col md:flex-row gap-2 p-2 dark:hover:bg-slate-800/40 rounded-xl"
+            className="flex flex-col md:flex-row gap-2 dark:hover:bg-slate-800/40 rounded-xl"
           >
             <Image
               src={project.image}
@@ -23,7 +24,7 @@ export default function Project() {
               height={30}
               alt={project.name}
             />
-            <div>
+            <div className="w-full">
               <h1 className="font-bold text-lg">{project.name}</h1>
               <time className="text-sm text-foreground/80">{project.time}</time>
               <p className="text-sm dark:text-slate-400">
@@ -37,15 +38,17 @@ export default function Project() {
           </li>
         ))}
       </ul>
-      <button
-        type="button"
-        className="font-bold flex items-center gap-2  hover:text-gray-300 tracking-tight hover:cursor-pointer text-sm uppercase dark:text-slate-400"
-      >
-        Discover More Projects
-        <span>
-          <FaArrowRight />
-        </span>
-      </button>
+      <Link href={"/projects"}>
+        <button
+          type="button"
+          className="font-bold flex items-center gap-2  hover:text-gray-300 tracking-tight hover:cursor-pointer text-sm uppercase dark:text-slate-400"
+        >
+          Discover More Projects
+          <span>
+            <FaArrowRight />
+          </span>
+        </button>
+      </Link>
     </section>
   );
 }
