@@ -20,7 +20,7 @@ export default function Hero() {
           </h1>
         </div>
         <h2 className="mt-2 font-bold tracking-tight dark:text-slate-400/90 text-lg">
-          Full Stack Developer
+          Data Analyst intern @ MTA
         </h2>
         <p className="mt-3 max-w-2xs dark:text-slate-500 leading-normal">
           I turn code into inclusive, AI-driven solutions for real-world
