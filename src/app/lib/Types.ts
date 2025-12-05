@@ -4,4 +4,5 @@ export interface ProjectDetails {
   description: string;
   techStack: string;
   time: string;
+  url?: string
 }

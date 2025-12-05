@@ -8,6 +8,7 @@ export const projects: ProjectDetails[] = [
   {
     name: "NutriVoice (Hackathon Win)",
     image: image.src,
+    url: "",
     description:
       "A AI-powered nutrition tracker for the visually impaired built at columbia university hackathon (devfest 2025)",
     techStack: "React, Flask, OpenAI Whisper & Vision",
