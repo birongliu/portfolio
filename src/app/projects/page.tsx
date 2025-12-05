@@ -22,7 +22,7 @@ export default function Projects() {
   }, [query]);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br max-w-7xl from-slate-950 via-blue-950 to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br  from-slate-950 via-blue-950 to-slate-900">
       <div className="w-full max-w-6xl mx-auto px-6 py-20">
         {/* Back Button */}
         <Link
