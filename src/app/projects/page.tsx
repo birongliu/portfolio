@@ -5,7 +5,7 @@ import Image from "next/image";
 import { projects } from "@/app/lib/constants";
 import Link from "next/link";
 
-export default function page() {
+export default function Projects() {
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
