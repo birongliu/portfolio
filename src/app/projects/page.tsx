@@ -51,7 +51,7 @@ export default function Projects() {
             Projects & Work
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
-            A collection of projects I've built — from hackathon wins to
+            A collection of projects I&apos;ve built — from hackathon wins to
             production applications
           </p>
 
