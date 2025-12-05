@@ -52,7 +52,7 @@ export default function Hero() {
           <Link
             href="/Bi_Rong_Liu_Resume.pdf"
             target="_blank"
-            download={true}
+            download={false}
             className="hover:text-white"
           >
             <svg
