@@ -14,6 +14,8 @@ export default function Hero() {
             height={36}
             alt="birongliu profile picture via github"
             src="https://avatars.githubusercontent.com/u/62890027?v=4"
+            priority
+            loading="eager"
           />
           <h1 className="font-bold text-3xl uppercase dark:text-slate-300 tracking-tight">
             birong.liu
